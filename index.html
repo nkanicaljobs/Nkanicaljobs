@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nkanical Jobs</title>
+<style>
+:root{--pr:#2f6fed;--tx:#1b1f2a;--mu:#6b7280;--bd:#e6e9f0;--wr:#d97706}
+*{box-sizing:border-box}
+body{margin:0;color:var(--tx);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Devanagari","Noto Sans Bengali","Noto Sans Gujarati","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Kannada","Noto Sans Malayalam","Noto Sans Gurmukhi",sans-serif;background:#f6f7fb url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150' fill='none' stroke='%231b1f2a' stroke-opacity='.06' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cg transform='translate(16 14) scale(1.7)'%3E%3Cpath d='M13 2L4 14h7l-1 8 9-12h-7z'/%3E%3C/g%3E%3Cg transform='translate(92 22) scale(1.7)'%3E%3Cpath d='M14 4l6 6-3 3-6-6zM12 8L3 17l4 4 9-9'/%3E%3C/g%3E%3Cg transform='translate(52 88) scale(1.7)'%3E%3Cpath d='M3 18h18M5 18a7 7 0 0 1 14 0M12 8V5'/%3E%3C/g%3E%3C/svg%3E")}
+header{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);padding:10px 14px;display:flex;justify-content:space-between;align-items:center;z-index:5;border-bottom:1px solid var(--bd)}
+.logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:17px;letter-spacing:-.3px}
+.logo span{color:var(--pr)}
+.logo .lm{width:30px;height:22px;border-radius:6px;background:var(--pr);color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center}
+.hr{display:flex;align-items:center;gap:6px}
+.ib{background:transparent;color:var(--tx);padding:6px;border-radius:50%;display:flex}
+.ib svg,#bnav svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+main{max-width:640px;margin:0 auto;padding:10px 0 84px}
+input,select,textarea,button{font:inherit;color:inherit}
+input,select,textarea{width:100%;padding:11px 12px;border:1px solid var(--bd);border-radius:12px;background:#fff;margin-bottom:8px}
+input[type=checkbox]{width:auto;margin:0 6px 0 0}
+select.lg{width:auto;margin:0;padding:6px 8px;font-size:13px;border-radius:99px;background:#f2f4f8;border:0;max-width:108px}
+textarea{min-height:64px}
+button{border:0;border-radius:10px;padding:9px 13px;background:var(--pr);color:#fff;cursor:pointer}
+button:disabled{opacity:.45;cursor:not-allowed}
+button.d{background:#fff;color:#dc2626;border:1px solid var(--bd)}
+.mu{color:var(--mu);font-size:13px}
+.hide{display:none!important}
+a{text-decoration:none}
+.card{background:#fff;border:1px solid var(--bd);border-radius:16px;padding:14px;margin:0 12px 12px}
+.card h3{margin:0 0 8px;font-size:16px}
+.lb{display:block;font-size:12.5px;font-weight:600;color:var(--mu);margin:4px 2px 4px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.chk{display:inline-flex;align-items:center;margin-right:14px;font-size:14px}
+.side-offer .s,.side-seek .o{display:none}
+.seg{display:flex;background:#e9edf4;border-radius:12px;padding:3px;margin:0 12px 10px}
+.seg button{flex:1;background:transparent;color:var(--mu);border-radius:10px;padding:8px 6px;font-size:14px;font-weight:600}
+.seg button.on{background:#fff;color:var(--tx);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+#sbar{padding:0 12px}
+.mbar{display:flex;gap:8px;overflow-x:auto;padding:0 12px 8px;scrollbar-width:none}
+.mbar::-webkit-scrollbar{display:none}
+.mbar button{flex:0 0 auto;background:#fff;color:var(--tx);border:1px solid var(--bd);border-radius:99px;padding:6px 13px;font-size:13px;font-weight:600}
+.mbar button.on{background:var(--pr);color:#fff;border-color:var(--pr)}
+#chips{display:flex;gap:8px;overflow-x:auto;padding:2px 12px 10px;scrollbar-width:none}
+#chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;background:#fff;color:var(--tx);border:1px solid var(--bd);border-radius:99px;padding:6px 13px;font-size:13.5px;font-weight:500}
+.chip.on{background:var(--tx);color:#fff;border-color:var(--tx)}
+.fbar{display:flex;gap:8px;overflow-x:auto;padding:0 12px 10px;align-items:center;scrollbar-width:none}
+.fbar::-webkit-scrollbar{display:none}
+select.pill,input.pillin{flex:0 0 auto;width:auto;margin:0;padding:7px 12px;font-size:13.5px;border-radius:99px}
+select.pill{max-width:165px}
+input.pillin{min-width:130px;max-width:170px}
+.jc{position:relative;overflow:hidden;background:#fff;border:1px solid var(--bd);border-radius:16px;padding:14px;margin:0 12px 10px;box-shadow:0 1px 2px rgba(20,30,60,.04)}
+.jc .wm{position:absolute;right:-8px;bottom:-14px;width:100px;height:100px;fill:none;stroke:var(--tx);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;opacity:.07;pointer-events:none}
+.ti{font-weight:600;font-size:16px;line-height:1.3}
+.r2{color:var(--mu);font-size:13.5px;margin-top:6px;line-height:1.6;position:relative}
+.r2 b{color:var(--tx);font-weight:600}
+.nearline{margin-top:4px;color:var(--mu);font-size:13.5px}
+.dbadge{display:inline-block;background:#eaf0ff;color:var(--pr);border-radius:99px;padding:1px 9px;font-size:12.5px;font-weight:700;margin-left:4px}
+.dask{background:#eaf0ff;color:var(--pr);border:0;border-radius:99px;padding:4px 12px;font-size:12.5px;font-weight:600;display:inline-flex;align-items:center;gap:4px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;position:relative}
+.tg{background:#f0f3f9;border-radius:99px;padding:3px 10px;font-size:12px;font-weight:500}
+.tg.ft{background:#fff4e0;color:var(--wr)}
+.tg.sent{background:#eaf0ff;color:var(--pr)}
+.tg.rec,.tg.mtc{background:#e7f6ec;color:#15803d;font-weight:600}
+.tg.be{background:#fef3c7;color:#b45309;font-weight:600}
+.gb{background:#e7f6ec;color:#15803d;border-radius:6px;padding:1px 6px;font-size:11px;font-weight:600}
+.r3{display:flex;gap:12px;align-items:center;font-size:12px;color:var(--mu);margin-top:8px;position:relative}
+.r3 svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.8;vertical-align:-2px}
+.st{color:var(--wr);font-weight:700}
+.acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px;position:relative}
+.ab{border:0;background:#f0f3f9;color:var(--tx);padding:8px 14px;border-radius:99px;font-size:13px;font-weight:600;display:inline-block}
+.ab.pr{background:var(--pr);color:#fff;padding:8px 16px}
+.ab.dl{color:#dc2626}
+.ab.ok{background:#e7f6ec;color:#15803d}
+.ab.fav{background:#fee2e2;color:#dc2626}
+.kv{display:flex;gap:8px;padding:7px 0;border-bottom:1px solid #eef0f5;font-size:14px}
+.kv span{flex:0 0 40%;color:var(--mu)}
+.kv b{font-weight:600;word-break:break-word}
+.pf{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.pf .big{width:52px;height:52px;border-radius:50%;background:var(--pr);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700}
+#out{width:calc(100% - 24px);margin:0 12px}
+details{border:1px solid var(--bd);border-radius:10px;padding:8px 10px;margin-bottom:8px}
+summary{cursor:pointer;font-weight:600}
+.hero{text-align:center;padding:6px 0 10px}
+.hero .lm{width:46px;height:34px;border-radius:10px;background:var(--pr);color:#fff;font-weight:700;display:inline-flex;align-items:center;justify-content:center;font-size:20px}
+.hero h2{margin:8px 0 2px;font-size:22px}
+#list>p,#mlist>p,#favlist>p{padding:12px}
+#dlg{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:20;display:flex;align-items:flex-end}
+.sheet{background:#fff;border-radius:20px 20px 0 0;width:100%;max-width:640px;margin:0 auto;max-height:88vh;overflow:auto;padding:16px 14px calc(16px + env(safe-area-inset-bottom,0px))}
+.sheet h4{margin:14px 0 6px;font-size:15px}
+.shd{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:4px}
+.xbtn{background:#f0f3f9;color:var(--tx);width:32px;height:32px;border-radius:50%;padding:0;font-size:16px;font-weight:700;flex:0 0 auto;display:flex;align-items:center;justify-content:center}
+.rv{border-bottom:1px solid #eef0f5;padding:10px 0;font-size:14px}.rv p{margin:4px 0}
+.nkv{font-size:13px;color:var(--mu);margin-top:4px;line-height:1.5}
+.nkv b{color:var(--tx);font-weight:600}
+#stars{display:flex;gap:4px;margin:6px 0}
+#stars button{background:#f0f3f9;color:#b8bfcc;font-size:24px;padding:2px 8px;border-radius:8px}
+#stars button.on{color:var(--wr)}
+#ob{position:fixed;inset:0;background:#f6f7fb;z-index:30;display:flex;flex-direction:column;justify-content:center;padding:20px}
+#ob h2{margin:0 0 14px}
+.obb{display:block;width:100%;background:#fff;border:1px solid var(--bd);border-radius:18px;padding:18px;margin-bottom:12px;text-align:left;color:var(--tx)}
+.obb b{display:block;font-size:18px}.obb span{color:var(--mu);font-size:13px}
+#bnav{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #eee;display:flex;z-index:9;padding-bottom:env(safe-area-inset-bottom,0)}
+#bnav button{flex:1;background:transparent;color:var(--mu);border-radius:0;padding:8px 2px 6px;font-size:11px;display:flex;flex-direction:column;align-items:center;gap:2px}
+#bnav button .ic{display:flex}
+#bnav button.on{color:var(--pr);font-weight:600}
+#bnav .pl{color:var(--pr)}
+.ch{display:flex;align-items:center;gap:10px;position:relative}
+.cl{flex:0 0 auto;width:40px;height:40px;border-radius:12px;background:#eaf0ff;color:var(--pr);display:flex;align-items:center;justify-content:center}
+.cl svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cx{font-size:19px;font-weight:700;letter-spacing:-.2px;flex:1;line-height:1.2}
+.hl{font-size:22px;font-weight:800;line-height:1.25;margin:10px 0 2px;position:relative}
+.ur{display:inline-block;color:#dc2626;font-weight:600;font-size:14px;margin-top:2px;position:relative}
+.sal{margin-top:8px;font-size:16px;font-weight:700;color:var(--pr);position:relative}
+.sal span{color:var(--mu);font-weight:500;font-size:14px}
+.vm{margin-left:auto;background:transparent;color:var(--pr);padding:6px 2px;font-weight:600;font-size:13.5px}
+.bell{position:relative}
+.bdg{position:absolute;top:-1px;right:-2px;min-width:17px;height:17px;border-radius:99px;background:#dc2626;color:#fff;font-size:10.5px;font-weight:700;line-height:17px;text-align:center;padding:0 4px}
+.mi{display:flex;align-items:center;gap:12px;width:100%;background:transparent;color:var(--tx);border-radius:0;padding:13px 2px;border-bottom:1px solid #eef0f5;text-align:left;font-size:15px;font-weight:500}
+.mi:last-child{border-bottom:0}
+.mi svg{width:22px;height:22px;fill:none;stroke:var(--pr);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
+.mi span{flex:1}.mi b{color:var(--mu);font-size:20px;font-weight:400}
+.locbox{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.lchk{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:13.5px;margin:2px 0 12px;color:var(--tx)}
+.lchk label{display:inline-flex;align-items:center;cursor:pointer}
+.lchk a{color:var(--pr);font-weight:600;text-decoration:underline}
+.tncp{font-size:13.5px;line-height:1.55;color:#374151}
+.tncp b{color:var(--tx)}
+.tncb{background:#eef4ff;border-radius:12px;padding:10px 12px;margin:8px 0 12px;color:#1e3a8a;font-size:13.5px}
+.sugbox{background:#eaf0ff;border-radius:14px;padding:10px 12px;margin:0 12px 10px;display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+<div class="logo"><span class="lm">N</span><div>Nkanical <span>Jobs</span></div></div>
+<div class="hr">
+<button id="sbtn" class="ib" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+<select id="lang" class="lg" aria-label="Language">
+<option value="hi">हिंदी</option><option value="en">English</option><option value="mr">मराठी</option><option value="bn">বাংলা</option><option value="gu">ગુજરાતી</option>
+<option value="ta">தமிழ்</option><option value="te">తెలుగు</option><option value="kn">ಕನ್ನಡ</option><option value="ml">മലയാളം</option><option value="pa">ਪੰਜਾਬੀ</option>
+</select>
+<button id="bell" class="ib bell" aria-label="Notifications"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg><span id="bdg" class="bdg hide"></span></button>
+</div>
+</header>
+<main>
+<datalist id="cities_dl"></datalist>
+
+<section id="auth" class="card hide">
+<div class="hero"><div class="lm">N</div><h2>Nkanical Jobs</h2><div class="mu" data-i18n="tagline"></div></div>
+<h3 id="atitle"></h3>
+<input id="em" type="email" data-ph="email">
+<input id="pw" type="password" data-ph="password">
+<div class="lchk"><label><input type="checkbox" id="agreeChk">I agree with our</label> <a href="#" id="tncLink">Terms &amp; Conditions</a></div>
+<button id="go" style="width:100%" disabled></button>
+<p class="mu" id="amsg"></p>
+<p class="mu"><a href="#" id="sw"></a> | <a href="#" id="fg" data-i18n="forgot"></a></p>
+</section>
+
+<div id="app" class="hide">
+<section id="feed">
+<div class="seg" id="seg"><button data-h="offer" class="on" data-i18n="tab_offer"></button><button data-h="seek" data-i18n="tab_seek"></button></div>
+<div class="mbar" id="mbar">
+<button data-m="all" class="on" data-i18n="all"></button>
+<button data-m="sug">🎯 <span data-i18n="best_sug"></span></button>
+<button data-m="emp">⭐ <span data-i18n="best_emp"></span></button>
+</div>
+<div id="sbar" class="hide"><input id="q" data-ph="search_ph"></div>
+<div id="chips"></div>
+<input id="fc" type="hidden" value="">
+<div class="fbar">
+<select id="fstate" class="pill"></select>
+<input id="fcity" class="pillin" list="cities_dl" data-ph="ph_fcity">
+</div>
+<div id="sugHint" class="sugbox hide"><span data-i18n="sug_hint"></span><button type="button" id="goProf" class="ab pr" data-i18n="set_pref"></button></div>
+<div id="locMsg" class="mu hide" style="padding:0 12px 8px"></div>
+<div id="list"></div>
+</section>
+
+<section id="new" class="hide card side-offer">
+<div class="seg" id="sidetabs" style="margin:0 0 10px"><button data-side="offer" class="on" data-i18n="s_offer"></button><button data-side="seek" data-i18n="s_seek"></button></div>
+<label class="lb o" data-i18n="l_title_o"></label><label class="lb s" data-i18n="l_title_s"></label>
+<input id="t">
+<div class="o">
+<label class="lb" data-i18n="l_otype"></label><select id="otype"></select>
+<label class="lb" data-i18n="l_firm"></label><input id="firm" data-ph="l_firm">
+</div>
+<div class="s"><label class="lb" data-i18n="l_name"></label><input id="nm" data-ph="l_name"></div>
+<label class="lb" data-i18n="l_cat"></label><select id="c"></select>
+<div class="g2">
+<div><label class="lb o" data-i18n="l_pay"></label><label class="lb s" data-i18n="l_psal"></label><input id="pay" data-ph="ph_pay"></div>
+<div class="o"><label class="lb" data-i18n="l_openings"></label><input id="op" type="number" min="1" inputmode="numeric"></div>
+<div class="s"><label class="lb" data-i18n="l_age"></label><input id="ag" type="number" inputmode="numeric"></div>
+</div>
+<div><label class="lb" data-i18n="l_per"></label><select id="pper"></select></div>
+<div class="o g2">
+<div><label class="lb" data-i18n="l_jtype"></label><select id="jt"></select></div>
+<div><label class="lb" data-i18n="l_timing"></label><input id="tm" data-ph="ph_timing"></div>
+</div>
+<div class="g2">
+<div><label class="lb" data-i18n="l_qual"></label><select id="ql"></select></div>
+<div><label class="lb" data-i18n="l_exp"></label><input id="ex" type="number" min="0" inputmode="numeric" data-ph="ph_exp"></div>
+</div>
+<label class="lb" data-i18n="l_state"></label><select id="state"></select>
+<div class="g2">
+<div><label class="lb" data-i18n="l_city"></label><input id="city" list="cities_dl" data-ph="ph_city"></div>
+<div><label class="lb" data-i18n="l_area"></label><input id="area" data-ph="ph_area"></div>
+</div>
+<div class="locbox">
+<button type="button" id="getLoc" class="ab">📍 <span data-i18n="btn_myloc"></span></button>
+<span id="locStat" class="mu"></span>
+</div>
+<div class="o"><label class="lb" data-i18n="l_addr"></label><input id="addr"></div>
+<div class="g2">
+<div><label class="lb" data-i18n="l_join"></label><select id="jn"></select></div>
+<div class="o"><label class="lb" data-i18n="l_gender"></label><select id="gd"></select></div>
+</div>
+<div class="o"><label class="lb" data-i18n="l_perks"></label>
+<label class="chk"><input type="checkbox" id="food"><span data-i18n="p_food"></span></label>
+<label class="chk"><input type="checkbox" id="stay"><span data-i18n="p_stay"></span></label>
+<label class="chk"><input type="checkbox" id="urg"><span data-i18n="p_urgent"></span></label></div>
+<div class="s"><label class="lb" data-i18n="l_work"></label><textarea id="wk" data-ph="ph_work"></textarea></div>
+<label class="lb" data-i18n="l_phone"></label><input id="ph" type="tel" data-ph="ph_phone">
+<label class="lb o" data-i18n="l_desc_o"></label><label class="lb s" data-i18n="l_desc_s"></label>
+<textarea id="d"></textarea>
+<div class="o"><label class="lb" data-i18n="l_gst"></label><input id="gst"></div>
+<button id="save" style="width:100%" data-i18n="btn_post"></button>
+<p class="mu" id="msg"></p>
+</section>
+
+<section id="mine" class="hide"><div id="mlist"></div></section>
+<section id="favs" class="hide"><div id="favlist"></div></section>
+
+<section id="profile" class="hide">
+<div class="card">
+<div class="pf"><div class="big" id="pav"></div><div><div class="mu" id="pem"></div><div class="mu" id="pcount"></div></div></div>
+<h3 data-i18n="sum_title"></h3>
+<div id="psum"></div>
+</div>
+<div class="card" style="padding:4px 14px">
+<button id="pmine" class="mi"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span data-i18n="n_mine"></span><b>›</b></button>
+<button id="pfavs" class="mi"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-9-9.2C1.2 7.8 4 4.5 7.5 4.5c2 0 3.6 1 4.5 2.4.9-1.4 2.5-2.4 4.5-2.4 3.5 0 6.3 3.3 4.5 7.3-2 4.7-9 9.2-9 9.2z"/></svg><span><span data-i18n="n_favs"></span><span id="pfavcount" class="mu"></span></span><b>›</b></button>
+<button id="phelp" class="mi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17h.01"/></svg><span data-i18n="n_help"></span><b>›</b></button>
+<button id="shareApp" class="mi"><svg viewBox="0 0 24 24"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4-4 4M12 2v14"/></svg><span data-i18n="n_share"></span><b>›</b></button>
+</div>
+<div class="card">
+<h3 data-i18n="stat_title"></h3>
+<div id="pstats"></div>
+</div>
+<div class="card">
+<h3 data-i18n="edit_title"></h3>
+<label class="lb" data-i18n="l_name"></label><input id="pn" data-ph="l_name">
+<label class="lb" data-i18n="l_role"></label>
+<select id="prole"><option value="" data-i18n="choose"></option><option value="seeker" data-i18n="role_seeker"></option><option value="employer" data-i18n="role_employer"></option></select>
+<div id="pemp" class="hide">
+<label class="lb" data-i18n="l_otype"></label><select id="potype"></select>
+<label class="lb" data-i18n="l_firm"></label><input id="pfirm" data-ph="l_firm">
+<label class="lb" data-i18n="l_ecat"></label><select id="pecat"></select>
+<label class="lb" data-i18n="l_esal"></label><input id="pesal" data-ph="ph_psal">
+<label class="lb" data-i18n="l_gst"></label><input id="pgst">
+</div>
+<div id="psk" class="hide">
+<label class="lb" data-i18n="l_pcat"></label><select id="pcat"></select>
+<div class="g2">
+<div><label class="lb" data-i18n="l_qual"></label><select id="pql"></select></div>
+<div><label class="lb" data-i18n="l_exp"></label><input id="pex" type="number" min="0" inputmode="numeric"></div>
+</div>
+<label class="lb" data-i18n="l_psal"></label><input id="psal" data-ph="ph_psal">
+</div>
+<label class="lb" data-i18n="l_phone"></label><input id="pp" type="tel" data-ph="ph_phone">
+<label class="lb" data-i18n="l_state"></label><select id="pstate"></select>
+<label class="lb" data-i18n="l_city"></label><input id="pc" list="cities_dl" data-ph="ph_city">
+<label class="lb" data-i18n="l_about"></label><textarea id="pabout" data-ph="ph_about"></textarea>
+<button id="psave" style="width:100%" data-i18n="btn_psave"></button>
+<p class="mu" id="pmsg"></p>
+</div>
+<button id="out" class="d" data-i18n="btn_logout"></button>
+</section>
+
+<section id="help" class="hide">
+<div class="card">
+<h3 data-i18n="h_title"></h3>
+<details><summary data-i18n="q1"></summary><p data-i18n="a1"></p></details>
+<details><summary data-i18n="q2"></summary><p data-i18n="a2"></p></details>
+<details><summary data-i18n="q3"></summary><p data-i18n="a3"></p></details>
+<details><summary data-i18n="q4"></summary><p data-i18n="a4"></p></details>
+</div>
+<div class="card">
+<h3 data-i18n="h_contact"></h3>
+<input id="hs" data-ph="ph_hs">
+<textarea id="hm" data-ph="ph_hm"></textarea>
+<button id="hsend" style="width:100%" data-i18n="btn_send"></button>
+<p class="mu" id="hmsg"></p>
+</div>
+</section>
+</div>
+</main>
+
+<div id="bnav" class="hide">
+<button data-t="feed" class="on"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8v10h-6v-6H9v6H3z"/></svg></span><span data-i18n="n_home"></span></button>
+<button data-t="new" class="pl"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg></span><span data-i18n="n_post"></span></button>
+<button data-t="profile"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><span data-i18n="n_profile"></span></button>
+</div>
+
+<div id="dlg" class="hide"><div class="sheet"><div id="dbody"></div><button id="dclose" class="d" style="width:100%;margin-top:12px" data-i18n="close"></button></div></div>
+
+<div id="ob" class="hide">
+<h2 data-i18n="ob_title"></h2>
+<button class="obb" data-role="seeker"><b data-i18n="ob_seek"></b><span data-i18n="ob_seek_s"></span></button>
+<button class="obb" data-role="employer"><b data-i18n="ob_offer"></b><span data-i18n="ob_offer_s"></span></button>
+<p class="mu" data-i18n="ob_hint"></p>
+</div>
+
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword,signOut,onAuthStateChanged,sendPasswordResetEmail} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import {getFirestore,collection,doc,setDoc,getDoc,addDoc,updateDoc,deleteDoc,onSnapshot,arrayUnion,increment,query,where} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBZQiOvKpr9AgdWeZVM580Nv1msDe9xmkw",
+  authDomain: "nkanical-jobs.firebaseapp.com",
+  projectId: "nkanical-jobs",
+  storageBucket: "nkanical-jobs.firebasestorage.app",
+  messagingSenderId: "695555664193",
+  appId: "1:695555664193:web:de716bc7459a562f5019c0"
+};
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+/* 10 Languages for Top 10 Developed States: hi, en, mr, bn, gu, ta, te, kn, ml, pa */
+const LANGS = ["hi","en","mr","bn","gu","ta","te","kn","ml","pa"];
+let LI = 0;
+try { const i = LANGS.indexOf(localStorage.getItem("lang")); if (i >= 0) LI = i; } catch (e) {}
+
+const T = {
+login:["लॉगिन","Login","लॉगिन","লগইন","લોગિન","உள்நுழைக","లాగిన్","ಲಾಗಿನ್","ലോഗിൻ","ਲੌਗਿਨ"],
+newacc:["नया अकाउंट","New account","नवीन खाते","নতুন অ্যাকাউন্ট","નવું ખાતું","புதிய கணக்கு","కొత్త ఖాతా","ಹೊಸ ಖಾತೆ","പുതിയ അക്കൗണ്ട്","ਨਵਾਂ ਖਾਤਾ"],
+signup:["साइन अप","Sign up","साइन अप","সাইন আপ","સાઇન અપ","பதிவு","సైన్ అప్","సైన్ ಅಪ್","സൈൻ അപ്പ്","ਸਾਈਨ ਅੱਪ"],
+email:["ईमेल","Email","ईमेल","ইমেল","ઇમેલ","மின்னஞ்சல்","ఇమెయిల్","ಇಮೇಲ್","ഇമെയിൽ","ਈਮੇਲ"],
+password:["पासवर्ड (6+ अक्षर)","Password (6+ chars)","पासवर्ड (6+ अक्षरे)","পাসওয়ার্ড (৬+ অক্ষর)","પાસવર્ડ (6+ અક્ષર)","கடவுச்சொல் (6+)","పాస్‌వర్డ్ (6+)","ಪಾಸ್‌ವರ್ಡ್ (6+)","പാസ്‌വേഡ് (6+)","ਪਾਸਵਰਡ (6+)"],
+mkacc:["नया अकाउंट बनाएँ","Create account","नवीन खाते","নতুন অ্যাকাউন্ট","નવું ખાતું","புதிய கணக்கு","కొత్త ఖాతా","ಹೊಸ ಖಾತೆ","പുതിയ അക്കൗണ്ട്","ਨਵਾਂ ਖਾਤਾ"],
+haveacc:["अकाउंट है? लॉगिन","Have account? Login","खाते आहे? लॉगिन","অ্যাকাউন্ট আছে?","ખાતું છે?","கணக்கு உள்ளதா?","ఖాతా ఉందా?","ಖಾತೆ ಇದೆಯೇ?","അക്കൗണ്ട് ഉണ്ടോ?","ਖਾਤਾ ਹੈ? ਲੌਗਿਨ"],
+forgot:["पासवर्ड भूल गए?","Forgot password?","पासवर्ड विसरलात?","ভুলে গেছেন?","ભૂલી ગયા?","மறந்ததா?","మర్చిపోయారా?","ಮರೆತಿರಾ?","മറന്നോ?","ਭੁੱਲ ਗਏ?"],
+leg_req:["Please agree to our Terms & Conditions first"],
+e_fill:["सही ईमेल और 6+ अक्षर पासवर्ड डालें","Valid email & 6+ password needed","योग्य ईमेल व पासवर्ड","সঠিক ইমেল ও পাসওয়ার্ড","સાચો ઇમેલ અને પાસવર્ડ","சரியான மின்னஞ்சல்","సరైన ఇమెయిల్","ಸರಿಯಾದ ಇಮೇಲ್","ശരിയായ ഇമെയിൽ","ਸਹੀ ਈਮੇਲ ਤੇ ਪਾਸਵਰਡ"],
+e_used:["ईमेल पहले से है","Email already exists","ईमेल आधीच आहे","ইমেল আছে","ઇમેલ પહેલેથી છે","ஏற்கனவே உள்ளது","ఇప్పటికే ఉంది","ಈಗಾಗಲೇ ಇದೆ","നിലവിലുണ്ട്","ਪਹਿਲਾਂ ਤੋਂ ਹੈ"],
+e_cred:["ईमेल या पासवर्ड गलत है","Wrong email/password","ईमेल/पासवर्ड चूक","ভুল ইমেল/পাসওয়ার্ড","ખોટો ઇમેલ/પાસવર્ડ","தவறான விவரம்","తప్పు వివరాలు","ತಪ್ಪು ವಿವರ","തെറ്റായ വിവരങ്ങൾ","ਗਲਤ ਈਮੇਲ/ਪਾਸਵਰਡ"],
+e_mail:["ईमेल सही नहीं","Invalid email","ईमेल चूक","ইমেল ভুল","ઇમેલ ખોટો","தவறான மின்னஞ்சல்","తప్పు ఇమెయిల్","ತಪ್ಪು ಇಮೇಲ್","തെറ്റായ ഇമെയിൽ","ਈਮੇਲ ਸਹੀ ਨਹੀਂ"],
+e_weak:["6+ अक्षर का पासवर्ड रखें","Use 6+ chars","6+ अक्षरे","৬+ অক্ষর","6+ અક્ષર","6+ எழுத்து","6+ అక్షరాలు","6+ ಅಕ್ಷರ","6+ അക്ഷരം","6+ ਅੱਖਰ"],
+e_other:["कुछ गड़बड़ हुई","Error, try again","चूक झाली","ত্রুটি হয়েছে","ભૂલ થઈ","தவறு ஏற்பட்டது","లోపం జరిగింది","ದೋಷವಾಗಿದೆ","പിശക്","ਗਲਤੀ ਹੋਈ"],
+r_mail:["पहले ईमेल लिखें","Enter email first","ईमेल लिहा","ইমেল লিখুন","ઇમેલ લખો","மின்னஞ்சல் உள்ளிடவும்","ఇమెయిల్ రాయండి","ಇಮೇಲ್ ಬರೆಯಿರಿ","ഇമെയിൽ നൽകുക","ਈਮੇਲ ਲਿਖੋ"],
+r_sent:["रीसेट लिंक भेजा गया","Reset link sent","लिंक पाठवली","লিংক পাঠানো হয়েছে","લિંક મોકલી","அனுப்பப்பட்டது","పంపబడింది","ಕಳುಹಿಸಲಾಗಿದೆ","അയച്ചു","ਲਿੰਕ ਭੇਜਿਆ ਗਿਆ"],
+r_fail:["लिंक नहीं भेज पाए","Could not send","पाठवता आले नाही","পাঠানো যায়নি","મોકલાઈ નહીં","அனுப்ப முடியவில்லை","పంపలేకపోయాము","ಕಳುಹಿಸಲಾಗಲಿಲ್ಲ","അയക്കാനായില്ല","ਨਹੀਂ ਭੇਜ ਸਕੇ"],
+n_home:["होम","Home","होम","হোম","હોમ","முகப்பு","హోమ్","ಮುಖಪುಟ","ഹോം","ਹੋਮ"],
+n_mine:["मेरी पोस्ट","My Posts","माझ्या पोस्ट","আমার পোস্ট","મારી પોસ્ટ","என் பதிவுகள்","నా పోస్ట్‌లు","ನನ್ನ ಪೋಸ್ಟ್","എന്റെ പോസ്റ്റ്","ਮੇਰੀਆਂ ਪੋਸਟਾਂ"],
+n_favs:["मेरी विशलिस्ट","My Wishlist","माझी विशलिस्ट","আমার উইশলিস্ট","મારી વિશલિસ્ટ","விருப்பப்பட்டியல்","విష్‌లిస్ట్","ವಿಶ್‌ಲಿಸ್ಟ್","വിഷ്‌ലിസ്റ്റ്","ਮੇਰੀ ਵਿਸ਼ਲਿਸਟ"],
+n_post:["पोस्ट","Post","पोस्ट","পোস্ট","પોસ્ટ","பதிவு","పోస్ట్","ಪೋಸ್ಟ್","പോസ്റ്റ്","ਪੋਸਟ"],
+n_help:["मदद","Help","मदत","সাহায্য","મદદ","உதவி","సహాయం","ಸಹಾಯ","സഹായം","ਮਦਦ"],
+n_share:["शेयर","Share","शेअर","শেয়ার","શેર","பகிர்","షేర్","ಹಂಚಿಕೊಳ್ಳಿ","ഷെയർ","ਸਾਂਝਾ"],
+n_profile:["प्रोफाइल","Profile","प्रोफाइल","প্রোফাইল","પ્રોફાઇલ","சுயவிவரம்","ప్రొఫైల్","ಪ್ರೊಫೈಲ್","പ്രൊഫൈൽ","ਪ੍ਰੋਫਾਈਲ"],
+search_ph:["खोजें (जैसे इलेक्ट्रीशियन, मुंबई)","Search (electrician, Mumbai)","शोधा (उदा. मुंबई)","খুঁজুন","શોધો","தேடுக","వెతకండి","ಹುಡುಕಿ","തിരയുക","ਖੋਜੋ"],
+all:["सभी","All","सर्व","সব","બધા","அனைத்தும்","అన్నీ","ಎಲ್ಲಾ","എല്ലാം","ਸਾਰੇ"],
+best_sug:["बेस्ट सुझाव","Best For You","सर्वोत्तम सूचना","সেরা পরামর্শ","તમારા માટે બેસ્ટ","உங்களுக்கானவை","మీ కోసం బెస్ట్","ನಿಮಗಾಗಿ ಬೆಸ್ಟ್","നിങ്ങൾക്കുള്ളത്","ਤੁਹਾਡੇ ਲਈ ਬੈਸਟ"],
+best_emp:["बेस्ट एम्पलाई","Best Employee","सर्वोत्तम कामगार","সেরা কর্মী","બેસ્ટ કર્મચારી","சிறந்த ஊழியர்","బెస్ట్ ఎంప్లాయీ","ಬೆಸ್ಟ್ ಎಂಪ್ಲಾಯೀ","ബെസ്റ്റ് എംപ്ലോയി","ਬੈਸਟ ਕਰਮਚਾਰੀ"],
+match_tag:["🎯 मैच","🎯 Match","🎯 मॅच","🎯 ম্যাচ","🎯 મેચ","🎯 பொருத்தம்","🎯 మ్యాచ్","🎯 ಮ್ಯಾಚ್","🎯 മാച്ച്","🎯 ਮੈਚ"],
+top_emp:["⭐ टॉप रेटेड","⭐ Top Rated","⭐ टॉप","⭐ সেরা","⭐ ટોપ","⭐ சிறந்த","⭐ టాప్","⭐ ಟಾಪ್","⭐ ടോപ്പ്","⭐ ਟੌਪ"],
+sug_hint:["सटीक सुझाव के लिए प्रोफाइल में श्रेणी और सैलरी चुनें","Set category & salary in Profile for exact matches","प्रोफाइलमध्ये श्रेणी व पगार निवडा","প্রোফাইলে বিভাগ ও বেতন সেট করুন","પ્રોફાઇલમાં શ્રેણી અને પગાર પસંદ કરો","சுயவிவரத்தில் வகை & சம்பளம் அமைக்கவும்","ప్రొఫైల్‌లో వర్గం & జీతం ఎంచుకోండి","ಪ್ರೊಫೈಲ್‌ನಲ್ಲಿ ವರ್ಗ ಮತ್ತು ಸಂಬಳ ಆಯ್ಕೆಮಾಡಿ","പ്രൊഫൈലിൽ വിഭാഗവും ശമ്പളവും ചേർക്കുക","ਪ੍ਰੋਫਾਈਲ ਵਿੱਚ ਸ਼੍ਰੇਣੀ ਤੇ ਤਨਖਾਹ ਸੈੱਟ ਕਰੋ"],
+set_pref:["सेट करें","Set now","सेट करा","সেট করুন","સેટ કરો","அமைக்க","సెట్ చేయండి","ಸೆಟ್ ಮಾಡಿ","സെറ്റ് ചെയ്യുക","ਸੈੱਟ ਕਰੋ"],
+all_states:["सभी प्रमुख राज्य","All Top States","सर्व प्रमुख राज्ये","সব প্রধান রাজ্য","બધા મુખ્ય રાજ્યો","அனைத்து மாநிலங்கள்","అన్ని రాష్ట్రాలు","ಎಲ್ಲಾ ರಾಜ್ಯಗಳು","എല്ലാ സംസ്ഥാനങ്ങളും","ਸਾਰੇ ਪ੍ਰਮੁੱਖ ਰਾਜ"],
+near_me:["Near Me","Near Me","Near Me","Near Me","Near Me","Near Me","Near Me","Near Me","Near Me","Near Me"],
+away:["दूर","away","लांब","দূরে","દૂર","தொலைவில்","దూరంలో","ದೂರ","അകലെ","ਦੂਰ"],
+loc_getting:["लोकेशन खोजी जा रही है...","Getting location...","लोकेशन शोधत आहे...","লোকেশন খোঁজা হচ্ছে...","લોકેશન શોધી રહ્યા છીએ...","இடம் தேடுகிறது...","స్థానం పొందుతోంది...","ಸ್ಥಳ ಪಡೆಯುತ್ತಿದೆ...","ലൊക്കേഷൻ എടുക്കുന്നു...","ਲੋਕੇਸ਼ਨ ਲੱਭੀ ਜਾ ਰਹੀ ਹੈ..."],
+loc_on:["आपकी लोकेशन से दूरी दिख रही है","Distance from your location","तुमच्या ठिकाणापासून अंतर","লোকেশন থেকে দূরত্ব","તમારા લોકેશનથી અંતર","உங்கள் இடத்திலிருந்து தூரம்","మీ స్థానం నుండి దూరం","ಸ್ಥಳದಿಂದ ದೂರ","സ്ഥലത്തുനിന്നുള്ള ദൂരം","ਲੋਕੇਸ਼ਨ ਤੋਂ ਦੂਰੀ"],
+loc_err:["लोकेशन की अनुमति नहीं मिली","Location permission denied","परवानगी नाकारली","অনুমতি মেলেনি","મંજૂરી નથી","அனுமதி இல்லை","అనుమతి లేదు","ಅನುಮತಿ ಇಲ್ಲ","അനുമതിയില്ല","ਇਜਾਜ਼ਤ ਨਹੀਂ ਮਿਲੀ"],
+loc_saved:["लोकेशन सेव हो गई","Location saved","सेव्ह झाले","সেভ হয়েছে","સેવ થયું","சேமிக்கப்பட்டது","సేవ్ అయింది","ಉಳಿಸಲಾಗಿದೆ","സേവ് ചെയ്തു","ਸੇਵ ਹੋ ਗਈ"],
+btn_myloc:["वर्तमान लोकेशन जोड़ें","Use current location","सध्याचे लोकेशन वापरा","বর্তমান লোকেশন দিন","હાલનું લોકેશન","தற்போதைய இடம்","ప్రస్తుత స్థానం","ಪ್ರಸ್ತುತ ಸ್ಥಳ","നിലവിലെ സ്ഥലം","ਮੌਜੂਦਾ ਲੋਕੇਸ਼ਨ"],
+choose:["चुनें","Choose","निवडा","বেছে নিন","પસંદ કરો","தேர்ந்தெடு","ఎంచుకోండి","ಆಯ್ಕೆ","തിരഞ്ഞെടുക്കുക","ਚੁਣੋ"],
+l_name:["आपका नाम","Your name","तुमचे नाव","আপনার নাম","તમારું નામ","பெயர்","పేరు","ಹೆಸರು","പേര്","ਤੁਹਾਡਾ ਨਾਮ"],
+l_cat:["श्रेणी","Category","प्रकार","বিভাগ","શ્રેણી","வகை","వర్గం","ವರ್ಗ","വിഭാഗം","ਸ਼੍ਰੇਣੀ"],
+l_state:["राज्य","State","राज्य","রাজ্য","રાજ્ય","மாநிலம்","రాష్ట్రం","ರಾಜ್ಯ","സംസ്ഥാനം","ਰਾਜ"],
+l_city:["शहर / कस्बा","City / Town","शहर / गाव","শহর","શહેર","நகரம்","నగరం","ನಗರ","നഗരം","ਸ਼ਹਿਰ"],
+ph_city:["जैसे: मुंबई, पुणे, बेंगलुरु","e.g. Mumbai, Pune, Bengaluru","उदा. मुंबई, पुणे","যেমন: কলকাতা","દા.ત. અમદાવાદ","எ.கா. சென்னை","ఉదా. హైదరాబాద్","ಉದಾ. ಬೆಂಗಳೂರು","ഉദാ. കൊച്ചി","ਜਿਵੇਂ: ਲੁਧਿਆਣਾ"],
+ph_fcity:["शहर लिखें...","Type city...","शहर लिहा...","শহর লিখুন...","શહેર લખો...","நகரம்...","నగరం...","ನಗರ...","നഗരം...","ਸ਼ਹਿਰ ਲਿਖੋ..."],
+l_area:["इलाका / मोहल्ला","Area","परिसर","এলাকা","વિસ્તાર","பகுதி","ప్రాంతం","ಪ್ರದೇಶ","സ്ഥലം","ਇਲਾਕਾ"],
+l_pay:["सैलरी / रेट","Salary / Rate","पगार","বেতন","પગાર","சம்பளம்","జీతం","ಸಂಬಳ","ശമ്പളം","ਤਨਖਾਹ"],
+l_phone:["फोन नंबर","Phone","फोन","ফোন","ફોન","எண்","ఫోన్","ಫೋನ್","ഫോൺ","ਫ਼ੋਨ"],
+btn_post:["पोस्ट करें","Post","पोस्ट करा","পোস্ট করুন","પોસ્ટ કરો","பதிவிடவும்","పోస్ట్","ಪೋಸ್ಟ್","പോസ്റ്റ്","ਪੋਸਟ ਕਰੋ"],
+btn_update:["अपडेट करें","Update","अपडेट करा","আপডেট করুন","અપડેટ કરો","புதுப்பி","అప్‌డేట్","ಅಪ್‌ಡೇಟ್","അപ്‌ഡേറ്റ്","ਅਪਡੇਟ ਕਰੋ"],
+ph_title:["जैसे: इलेक्ट्रीशियन चाहिए","e.g. Electrician needed","उदा. इलेक्ट्रिशियन हवा","যেমন: ইলেকট্রিশিয়ান চাই","દા.ત. ઇલેક્ટ્રિશિયન જોઈએ","எ.கா. எலக்ட்ரீஷியன்","ఉదా. ఎలక్ట్రీషియన్","ಉದಾ. ಎಲೆಕ್ಟ್ರಿಷಿಯನ್","ഉദാ. ഇലക്ട്രീഷ്യൻ","ਜਿਵੇਂ: ਇਲੈਕਟ੍ਰੀਸ਼ੀਅਨ"],
+ph_area:["जैसे: अंधेरी, गुरुग्राम","e.g. Andheri, Gurugram","उदा. अंधेरी","যেমন: সল্টলেক","દા.ત. નવરંગપુરા","எ.கா. அண்ணா நகர்","ఉదా. అమీర్‌పేట్","ಉದಾ. ಇಂದಿರಾನಗರ","ഉദാ. ഇടപ്പള്ളി","ਜਿਵੇਂ: ਮਾਡਲ ਟਾਊਨ"],
+ph_pay:["जैसे: ₹500 प्रतिदिन","e.g. ₹500/day","उदा. ₹500/दिवस","যেমন: ₹৫০০/দিন","દા.ત. ₹500/દિવસ","₹500/நாள்","₹500/రోజు","₹500/ದಿನ","₹500/ദിവസം","₹500/ਦਿਨ"],
+ph_phone:["10 अंक","10 digits","10 अंक","১০ অঙ্ক","10 અંક","10 இலக்கம்","10 అంకెలు","10 ಅಂಕಿ","10 അക്കം","10 ਅੰਕ"],
+m_need:["शीर्षक और 10 अंकों का फोन ज़रूरी है","Title & 10-digit phone required","शीर्षक व फोन आवश्यक","শিরোনাম ও ফোন দরকার","શીર્ષક અને ફોન જરૂરી","தலைப்பு & எண் தேவை","శీర్షిక & ఫోన్ అవసరం","ಶೀರ್ಷಿಕೆ ಮತ್ತು ಫೋನ್ ಅಗತ್ಯ","തലക്കെട്ടും ഫോണും വേണം","ਸਿਰਲੇਖ ਤੇ ਫ਼ੋਨ ਜ਼ਰੂਰੀ"],
+m_posted:["पोस्ट हो गई","Posted","पोस्ट झाली","পোস্ট হয়েছে","પોસ્ટ થઈ","பதிவிடப்பட்டது","పోస్ట్ అయింది","ಪೋಸ್ಟ್ ಆಗಿದೆ","പോസ്റ്റ് ചെയ്തു","ਪੋਸਟ ਹੋ ਗਈ"],
+m_updated:["पोस्ट अपडेट हो गई","Updated","अपडेट झाली","আপডেট হয়েছে","અપડેટ થઈ","புதுப்பிக்கப்பட்டது","అప్‌డేట్ అయింది","ಅಪ್‌ಡೇಟ್ ಆಗಿದೆ","അപ്‌ഡേറ്റ് ചെയ്തു","ਅਪਡੇਟ ਹੋ ਗਈ"],
+m_postfail:["पोस्ट नहीं हो पाई","Post failed","पोस्ट झाली नाही","পোস্ট হয়নি","પોસ્ટ થઈ નહીં","முடியவில்லை","కాలేదు","ಆಗಲಿಲ್ಲ","ആയില്ല","ਨਹੀਂ ਹੋ ਸਕੀ"],
+l_otype:["आप कौन हैं","Who is hiring","तुम्ही कोण आहात","আপনি কে","તમે કોણ છો","நீங்கள் யார்","మీరు ఎవరు","ನೀವು ಯಾರು","നിങ്ങൾ ആരാണ്","ਤੁਸੀਂ ਕੌਣ ਹੋ"],
+ot_company:["कंपनी","Company","कंपनी","কোম্পানি","કંપની","நிறுவனம்","కంపెనీ","ಕಂಪನಿ","കമ്പനി","ਕੰਪਨੀ"],
+ot_owner:["कंपनी ओनर / मालिक","Company Owner","मालक","মালিক","માલિક","உரிமையாளர்","యజమాని","ಮಾಲೀಕರು","ഉടമ","ਕੰਪਨੀ ਮਾਲਕ"],
+ot_contractor:["ठेकेदार / कॉन्ट्रैक्टर","Contractor","कंत्राटदार","ঠিকাদার","કોન્ટ્રાક્ટર","ஒப்பந்ததாரர்","కాంట్రాక్టర్","ಗುತ್ತಿಗೆದಾರ","കരാറുകാരൻ","ਠੇਕੇਦਾਰ"],
+ot_shop:["दुकान / फर्म","Shop / Firm","दुकान","দোকান","દુકાન","கடை","దుకాణం","ಅಂಗಡಿ","കട","ਦੁਕਾਨ"],
+ot_individual:["काम देने वाला","Employer","मालक","নিয়োগকর্তা","કામ આપનાર","வேலை தருபவர்","యజమాని","ಉದ್ಯೋಗದಾತ","തൊഴിൽ ദാതാവ്","ਕੰਮ ਦੇਣ ਵਾਲਾ"],
+c_emp:["काम देने वाला","Employer","मालक","নিয়োগকর্তা","કામ આપનાર","வேலை தருபவர்","యజమాని","ಉದ್ಯೋಗದಾತ","തൊഴിൽ ദാതാവ്","ਕੰਮ ਦੇਣ ਵਾਲਾ"],
+c_worker:["काम करने वाला","Worker","कामगार","কর্মী","કામદાર","தொழிலாளி","కార్మికుడు","ಕಾರ್ಮಿಕ","തൊഴിലാളി","ਕੰਮ ਕਰਨ ਵਾਲਾ"],
+c_addr:["पता","Address","पत्ता","ঠিকানা","સરનામું","முகவரி","చిరునామా","ವಿಳಾಸ","വിലാസം","ਪਤਾ"],
+fav:["Add to Wishlist","Add to Wishlist","Add to Wishlist","Add to Wishlist","Add to Wishlist","Add to Wishlist","Add to Wishlist","Add to Wishlist","Add to Wishlist","Add to Wishlist"],
+fav_on:["Wishlisted","Wishlisted","Wishlisted","Wishlisted","Wishlisted","Wishlisted","Wishlisted","Wishlisted","Wishlisted","Wishlisted"],
+noname:["नाम नहीं दिया","No name","नाव नाही","নাম নেই","નામ નથી","பெயர் இல்லை","పేరు లేదు","ಹೆಸರಿಲ್ಲ","പേരില്ല","ਨਾਮ ਨਹੀਂ"],
+call:["कॉल","Call","कॉल","কল","કોલ","அழைப்பு","కాల్","ಕರೆ","വിളിക്കുക","ਕਾਲ"],
+share:["शेयर","Share","शेअर","শেয়ার","શેર","பகிர்","షేర్","ಹಂಚಿಕೊಳ್ಳಿ","ഷെയർ","ਸਾਂਝਾ"],
+report:["रिपोर्ट","Report","रिपोर्ट","রিপোর্ট","રિપોર્ટ","புகார்","రిపోర్ట్","ವರದಿ","റിപ്പോർട്ട്","ਰਿਪੋਰਟ"],
+delete:["डिलीट","Delete","हटवा","মুছুন","કાઢો","நீக்கு","తొలగించు","ಅಳಿಸಿ","നീക്കം","ਮਿਟਾਓ"],
+feat_test:["फीचर्ड (टेस्ट)","Featured (test)","फीचर्ड","ফিচার্ড","ફીચર્ડ","சிறப்பு","ఫీచర్డ్","ಫೀಚರ್ಡ್","ഫീച്ചർഡ്","ਫੀਚਰਡ"],
+featured:["फीचर्ड","Featured","फीचर्ड","ফিচার্ড","ફીચર્ડ","சிறப்பு","ఫీచర్డ్","ಫೀಚರ್ಡ್","ഫീച്ചർഡ്","ਫੀਚਰਡ"],
+empty_feed:["कोई पोस्ट नहीं मिली।","No posts found.","पोस्ट सापडली नाही.","পোস্ট পাওয়া যায়নি।","પોસ્ટ મળી નથી.","பதிவுகள் இல்லை.","పోస్ట్‌లు లేవు.","ಪೋಸ್ಟ್ ಸಿಗಲಿಲ್ಲ.","പോസ്റ്റുകളില്ല.","ਕੋਈ ਪੋਸਟ ਨਹੀਂ।"],
+empty_mine:["आपने कोई पोस्ट नहीं डाली।","No posts yet.","पोस्ट केले नाही.","পোস্ট করেননি।","પોસ્ટ કરી નથી.","பதிவிடவில்லை.","పోస్ట్ చేయలేదు.","ಪೋಸ್ಟ್ ಮಾಡಿಲ್ಲ.","പോസ്റ്റ് ചെയ്തിട്ടില്ല.","ਕੋਈ ਪੋਸਟ ਨਹੀਂ।"],
+empty_favs:["विशलिस्ट खाली है।","Wishlist is empty.","विशलिस्ट रिकामी आहे.","উইশলিস্ট খালি।","વિશલિસ્ટ ખાલી છે.","காலி.","విష్‌లిస్ట్ ఖాళీ.","ಖಾಲಿ ಇದೆ.","ശൂന്യമാണ്.","ਵਿਸ਼ਲਿਸਟ ਖਾਲੀ ਹੈ।"],
+cf_del:["पोस्ट डिलीट करें?","Delete post?","पोस्ट हटवायची का?","মুছবেন?","કાઢવી છે?","நீக்கவா?","తొలగించాలా?","ಅಳಿಸಬೇಕೇ?","നീക്കണോ?","ਮਿਟਾਈਏ?"],
+cf_ft:["टेस्ट मोड: फीचर्ड करें?","Test mode: make featured?","फीचर्ड करायचे का?","ফিচার্ড করবেন?","ફીચર્ડ કરવું છે?","சிறப்பாக்கவா?","ఫీచర్డ్ చేయాలా?","ಫೀಚರ್ಡ್ ಮಾಡಬೇಕೇ?","ഫീച്ചർ ചെയ്യണോ?","ਫੀਚਰਡ ਕਰੀਏ?"],
+rep_done:["रिपोर्ट भेज दी गई","Report sent","रिपोर्ट पाठवला","রিপোর্ট পাঠানো হয়েছে","રિપોર્ટ મોકલાયો","புகார் அனுப்பப்பட்டது","రిపోర్ట్ పంపబడింది","ವರದಿ ಕಳುಹಿಸಲಾಗಿದೆ","റിപ്പോർട്ട് അയച്ചു","ਰਿਪੋਰਟ ਭੇਜੀ ਗਈ"],
+rep_already:["पहले ही रिपोर्ट कर चुके हैं","Already reported","आधीच रिपोर्ट केले","আগেই রিপোর্ট করেছেন","રિપોર્ટ કરેલ છે","ஏற்கனவே புகார்","ఇప్పటికే రిపోర్ట్","ವರದಿ ಮಾಡಿದ್ದೀರಿ","റിപ്പോർട്ട് ചെയ്തു","ਪਹਿਲਾਂ ਹੀ ਰਿਪੋਰਟ"],
+ago_now:["अभी","just now","आत्ताच","এইমাত্র","હમણાં","இப்போது","ఇప్పుడే","ಈಗ","ഇപ്പോൾ","ਹੁਣੇ"],
+ago_min:["{n} मि.","{n}m","{n} मि.","{n} মি.","{n} મિ.","{n} நி.","{n} ని.","{n} ನಿ.","{n} മി.","{n} ਮਿ."],
+ago_hr:["{n} घं.","{n}h","{n} ता.","{n} ঘ.","{n} ક.","{n} ம.","{n} గం.","{n} ಗಂ.","{n} മ.","{n} ਘੰ."],
+ago_day:["{n} दि.","{n}d","{n} दि.","{n} দি.","{n} દિ.","{n} நா.","{n} రో.","{n} ದಿ.","{n} ദി.","{n} ਦਿ."],
+sh_see:["Nkanical Jobs पर देखें:","See on Nkanical Jobs:","Nkanical Jobs वर पहा:","Nkanical Jobs-এ দেখুন:","Nkanical Jobs પર જુઓ:","Nkanical Jobs-ல் பார்க்க:","Nkanical Jobs లో చూడండి:","Nkanical Jobs ನಲ್ಲಿ ನೋಡಿ:","Nkanical Jobs-ൽ കാണുക:","Nkanical Jobs ਤੇ ਵੇਖੋ:"],
+sh_app:["Nkanical Jobs पर नौकरी देखें","Find jobs on Nkanical Jobs","Nkanical Jobs पहा","Nkanical Jobs দেখুন","Nkanical Jobs જુઓ","Nkanical Jobs","Nkanical Jobs","Nkanical Jobs","Nkanical Jobs","Nkanical Jobs"],
+copied:["लिंक कॉपी हो गया","Link copied","कॉपी झाली","কপি হয়েছে","કોપી થઈ","நகலெடுக்கப்பட்டது","కాపీ అయింది","ಕಾಪಿ ಆಗಿದೆ","കോപ്പി ചെയ്തു","ਕਾਪੀ ਹੋ ਗਿਆ"],
+copy_prompt:["लिंक कॉपी करें:","Copy link:","लिंक कॉपी करा:","লিংক কপি করুন:","લિંક કોપી કરો:","நகலெடுக்கவும்:","కాపీ చేయండి:","ಕಾಪಿ ಮಾಡಿ:","കോപ്പി ചെയ്യുക:","ਕਾਪੀ ਕਰੋ:"],
+l_role:["मैं कौन हूँ","I am","मी कोण आहे","আমি কে","હું કોણ છું","நான் யார்","నేను ఎవరు","ನಾನು ಯಾರು","ഞാൻ ആരാണ്","ਮੈਂ ਕੌਣ ਹਾਂ"],
+role_seeker:["काम ढूँढ रहा हूँ","Looking for work","काम शोधत आहे","কাজ খুঁজছি","કામ શોધું છું","வேலை தேடுகிறேன்","పని వెతుకుతున్నాను","ಕೆಲಸ ಹುಡುಕುತ್ತಿದ್ದೇನೆ","ജോലി അന്വേഷിക്കുന്നു","ਕੰਮ ਲੱਭ ਰਿਹਾ ਹਾਂ"],
+role_employer:["काम देने वाला","Employer","काम देणारा","নিয়োগকর্তা","કામ આપનાર","வேலை தருபவர்","యజమాని","ಉದ್ಯೋಗದಾತ","തൊഴിൽ ദാതാവ്","ਕੰਮ ਦੇਣ ਵਾਲਾ"],
+l_pcat:["काम की श्रेणी (सुझाव के लिए)","Work category","कामाचा प्रकार","কাজের বিভাগ","કામની શ્રેણી","வேலை வகை","పని వర్గం","ಕೆಲಸದ ವರ್ಗ","ജോലി വിഭാഗം","ਕੰਮ ਦੀ ਸ਼੍ਰੇਣੀ"],
+l_ecat:["पसंदीदा कामगार श्रेणी (सुझाव के लिए)","Preferred worker category","आवडती श्रेणी","পছন্দের বিভাগ","પસંદગીની શ્રેણી","விரும்பும் வகை","ఇష్టమైన వర్గం","ಆದ್ಯತೆಯ ವರ್ಗ","ഇഷ്ടപ്പെട്ട വിഭാഗം","ਪਸੰਦੀਦਾ ਸ਼੍ਰੇਣੀ"],
+l_esal:["सैलरी देने की सीमा (प्रति माह)","Salary budget (/month)","पगार बजेट","বেতন বাজেট","પગાર બજેટ","சம்பள பட்ஜெட்","జీతం బడ్జెట్","ಸಂಬಳ ಬಜೆಟ್","ശമ്പള ബജറ്റ്","ਤਨਖਾਹ ਬਜਟ"],
+l_psal:["अपेक्षित सैलरी","Expected salary","अपेक्षित पगार","প্রত্যাশিত বেতন","અપેક્ષિત પગાર","சம்பளம்","ఆశించే జీతం","ಸಂಬಳ","ശമ്പളം","ਤਨਖਾਹ"],
+ph_psal:["जैसे: 15000","e.g. 15000","15000","১৫০০০","15000","15000","15000","15000","15000","15000"],
+l_about:["अपने बारे में","About","माझ्याबद्दल","নিজের সম্পর্কে","મારા વિશે","என்னைப் பற்றி","నా గురించి","ನನ್ನ ಬಗ್ಗೆ","എന്നെക്കുറിച്ച്","ਆਪਣੇ ਬਾਰੇ"],
+ph_about:["काम और अनुभव लिखें","Work & experience","अनुभव लिहा","কাজ ও অভিজ্ঞতা","અનુભવ લખો","அனுபவம் எழுதுக","అనుభవం రాయండి","ಅನುಭವ ಬರೆಯಿರಿ","പരിചയം എഴുതുക","ਤਜਰਬਾ ਲਿਖੋ"],
+btn_psave:["प्रोफाइल सेव करें","Save profile","सेव्ह करा","সেভ করুন","સેવ કરો","சேமி","సేవ్ చేయండి","ಉಳಿಸಿ","സേവ്","ਸੇਵ ਕਰੋ"],
+m_psaved:["प्रोफाइल सेव हो गया","Profile saved","सेव्ह झाले","সেভ হয়েছে","સેવ થયું","சேமிக்கப்பட்டது","సేవ్ అయింది","ಉಳಿಸಲಾಗಿದೆ","സേവ് ചെയ്തു","ਸੇਵ ਹੋ ਗਿਆ"],
+m_pfail:["सेव नहीं हो पाया","Could not save","सेव्ह झाले नाही","সেভ হয়নি","સેવ નહીં","முடியவில்லை","కాలేదు","ಆಗಲಿಲ್ಲ","ആയില്ല","ਨਹੀਂ ਹੋਇਆ"],
+m_pbad:["सही फोन डालें","Valid phone needed","योग्य फोन टाका","সঠিক ফোন দিন","સાચો ફોન","சரியான எண்","సరైన ఫోన్","ಸರಿಯಾದ ಫೋನ್","ശരിയായ ഫോൺ","ਸਹੀ ਫ਼ੋਨ"],
+my_count:["कुल पोस्ट","Total posts","एकूण पोस्ट","মোট পোস্ট","કુલ પોસ્ટ","மொத்த பதிவு","మొత్తం పోస్ట్‌లు","ಒಟ್ಟು ಪೋಸ್ಟ್","ആകെ പോസ്റ്റ്","ਕੁੱਲ ਪੋਸਟਾਂ"],
+btn_logout:["लॉग आउट","Logout","लॉग आउट","লগ আউট","લોગ આઉટ","வெளியேறு","లాగ్ అవుట్","ಲಾಗ್ ಔಟ್","ലോഗ് ഔട്ട്","ਲੌਗ ਆਊਟ"],
+sum_title:["मेरी जानकारी","My details","माझी माहिती","আমার তথ্য","મારી માહિતી","என் விவரம்","నా వివరాలు","ನನ್ನ ವಿವರ","എന്റെ വിവരങ്ങൾ","ਮੇਰੀ ਜਾਣਕਾਰੀ"],
+nosum:["कोई जानकारी सेव नहीं है।","No details saved.","माहिती सेव्ह नाही.","তথ্য নেই।","માહિતી નથી.","விவரம் இல்லை.","వివరాలు లేవు.","ವಿವರ ಇಲ್ಲ.","വിവരങ്ങളില്ല.","ਜਾਣਕਾਰੀ ਨਹੀਂ।"],
+edit_title:["प्रोफाइल बदलें","Edit profile","प्रोफाइल बदला","প্রোফাইল বদলান","પ્રોફાઇલ બદલો","திருத்து","మార్చండి","ಬದಲಿಸಿ","തിരുത്തുക","ਪ੍ਰੋਫਾਈਲ ਬਦਲੋ"],
+h_title:["मदद केंद्र","Help Desk","मदत केंद्र","সাহায্য কেন্দ্র","મદદ કેન્દ્ર","உதவி","సహాయం","ಸಹಾಯ","സഹായം","ਮਦਦ ਕੇਂਦਰ"],
+q1:["पोस्ट कैसे करें?","How to post?","पोस्ट कशी करावी?","কীভাবে পোস্ট করব?","પોસ્ટ કેવી રીતે?","பதிவிடுவது எப்படி?","పోస్ట్ ఎలా?","ಪೋಸ್ಟ್ ಹೇಗೆ?","പോസ്റ്റ് എങ്ങനെ?","ਪੋਸਟ ਕਿਵੇਂ?"],
+a1:["नीचे + पोस्ट पर टैप करें और जानकारी भरें।","Tap + Post below and fill details.","खाली + पोस्ट दाबा.","নিচে + পোস্ট চাপুন।","નીચે + પોસ્ટ દબાવો.","+ பதிவு அழுத்தவும்.","కింద + పోస్ట్ నొక్కండి.","+ ಪೋಸ್ಟ್ ಒತ್ತಿ.","+ പോസ്റ്റ് അമർത്തുക.","ਹੇਠਾਂ + ਪੋਸਟ ਦਬਾਓ।"],
+q2:["एडिट या डिलीट कैसे करें?","Edit or delete?","एडिट/डिलीट?","এডিট/মুছবেন?","એડિટ/ડિલીટ?","திருத்த/நீக்க?","ఎడిట్/డిలీట్?","ಎಡಿಟ್/ಅಳಿಸಿ?","തിരുത്താൻ?","ਐਡਿਟ/ਡਿਲੀਟ?"],
+a2:["अपनी पोस्ट पर टैप करके अंदर देखें, वहाँ बटन मिलेंगे।","Tap your post; Edit & Delete are inside.","पोस्टवर टॅप करा.","পোস্টে ট্যাপ করুন।","પોસ્ટ પર ટેપ કરો.","பதிவை தட்டவும்.","పోస్ట్ పై నొక్కండి.","ಪೋಸ್ಟ್ ಟ್ಯಾಪ್ ಮಾಡಿ.","പോസ്റ്റിൽ ടാപ്പ് ചെയ്യുക.","ਪੋਸਟ ਤੇ ਟੈਪ ਕਰੋ।"],
+q3:["फ्रॉड पोस्ट दिखे तो?","Fake post?","बनावट पोस्ट?","ভুয়া পোস্ট?","નકલી પોસ્ટ?","போலி பதிவு?","నకిలీ పోస్ట్?","ನಕಲಿ ಪೋಸ್ಟ್?","വ്യാജ പോസ്റ്റ്?","ਫਰਾਡ ਪੋਸਟ?"],
+a3:["पोस्ट के अंदर रिपोर्ट दबाएँ। 3 रिपोर्ट पर पोस्ट छिप जाती है।","Report inside. 3 reports hide it.","आत रिपोर्ट दाबा.","ভেতরে রিপোর্ট চাপুন।","અંદર રિપોર્ટ દબાવો.","உள்ளே புகார் செய்யவும்.","లోపల రిపోర్ట్ నొక్కండి.","ಒಳಗೆ ವರದಿ ಒತ್ತಿ.","ഉള്ളിൽ റിപ്പോർട്ട് ചെയ്യുക.","ਅੰਦਰ ਰਿਪੋਰਟ ਦਬਾਓ।"],
+q4:["सुरक्षा सुझाव","Safety tips","सुरक्षा सूचना","নিরাপত্তা","સલામતી","பாதுகாப்பு","భద్రత","ಸುರಕ್ಷತೆ","സുരക്ഷ","ਸੁਰੱਖਿਆ"],
+a4:["काम से पहले एडवांस पैसे न दें।","Never pay advance money.","आगाऊ पैसे देऊ नका.","অগ্রিম টাকা দেবেন না।","એડવાન્સ પૈસા ન આપો.","முன்பணம் தர வேண்டாம்.","అడ్వాన్స్ ఇవ్వకండి.","ಮುಂಗಡ ಕೊಡಬೇಡಿ.","അഡ്വാൻസ് നൽകരുത്.","ਐਡਵਾਂਸ ਪੈਸੇ ਨਾ ਦਿਓ।"],
+h_contact:["संपर्क करें","Contact us","संपर्क करा","যোগাযোগ","સંપર્ક","தொடர்பு","సంప్రదించండి","ಸಂಪರ್ಕಿಸಿ","ബന്ധപ്പെടുക","ਸੰਪਰਕ ਕਰੋ"],
+ph_hs:["विषय","Subject","विषय","বিষয়","વિષય","தலைப்பு","విషయం","ವಿಷಯ","വിഷയം","ਵਿਸ਼ਾ"],
+ph_hm:["समस्या लिखें","Problem","समस्या","সমস্যা","સમસ્યા","பிரச்சனை","సమస్య","ಸಮಸ್ಯೆ","പ്രശ്നം","ਸਮੱਸਿਆ"],
+btn_send:["भेजें","Send","पाठवा","পাঠান","મોકલો","அனுப்பு","పంపండి","ಕಳುಹಿಸಿ","അയക്കുക","ਭੇਜੋ"],
+m_hfill:["दोनों भरें","Fill both","दोन्ही भरा","দুটোই লিখুন","બંને ભરો","நிரப்பவும்","రెండూ రాయండి","ಭರ್ತಿ ಮಾಡಿ","പൂരിപ്പിക്കുക","ਦੋਵੇਂ ਲਿਖੋ"],
+m_hsent:["भेज दिया गया","Sent","पाठवले","পাঠানো হয়েছে","મોકલાયું","அனுப்பப்பட்டது","పంపబడింది","ಕಳುಹಿಸಲಾಗಿದೆ","അയച്ചു","ਭੇਜਿਆ ਗਿਆ"],
+m_hfail:["नहीं भेज पाए","Failed","पाठवता आले नाही","পাঠানো যায়নি","મોકલાયું નહીં","முடியவில்லை","కాలేదు","ಆಗಲಿಲ್ಲ","ആയില്ല","ਨਹੀਂ ਭੇਜ ਸਕੇ"],
+tagline:["सही काम, सही लोग","Right work, right people","योग्य काम, योग्य लोक","সঠিক কাজ, সঠিক মানুষ","સાચું કામ","சரியான வேலை","సరైన పని","ಸರಿಯಾದ ಕೆಲಸ","ശരിയായ ജോലി","ਸਹੀ ਕੰਮ, ਸਹੀ ਲੋਕ"],
+ob_title:["आप क्या करना चाहते हैं?","What would you like to do?","काय करायचे आहे?","কী করতে চান?","શું કરવું છે?","என்ன செய்ய விரும்புகிறீர்கள்?","ఏమి చేయాలనుకుంటున్నారు?","ಏನು ಮಾಡಲು ಬಯಸುತ್ತೀರಿ?","എന്ത് ചെയ്യണം?","ਕੀ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?"],
+ob_seek:["मुझे काम चाहिए","I need work","काम हवे आहे","কাজ চাই","કામ જોઈએ","வேலை வேண்டும்","పని కావాలి","ಕೆಲಸ ಬೇಕು","ജോലി വേണം","ਕੰਮ ਚਾਹੀਦਾ"],
+ob_seek_s:["मज़दूर, कारीगर या प्रोफेशनल","Worker or professional","कामगार / व्यावसायिक","শ্রমিক / পেশাদার","કામદાર / પ્રોફેશનલ","தொழிலாளி / நிபுணர்","కార్మికుడు / నిపుణుడు","ಕಾರ್ಮಿಕ / ವೃತ್ತಿಪರ","തൊഴിലാളി / പ്രൊഫഷണൽ","ਮਜ਼ਦੂਰ / ਪ੍ਰੋਫੈਸ਼ਨਲ"],
+ob_offer:["मुझे काम देना है","I want to hire","काम द्यायचे आहे","কাজ দিতে চাই","કામ આપવું છે","வேலை கொடுக்க","పని ఇస్తాను","ಕೆಲಸ ಕೊಡುತ್ತೇನೆ","ജോലി നൽകാൻ","ਕੰਮ ਦੇਣਾ ਹੈ"],
+ob_offer_s:["कंपनी, ओनर, कॉन्ट्रैक्टर या दुकान","Company, owner, contractor","कंपनी, मालक, कंत्राटदार","কোম্পানি, মালিক, ঠিকাদার","કંપની, માલિક, કોન્ટ્રાક્ટર","நிறுவனம், உரிமையாளர்","కంపెనీ, యజమాని","ಕಂಪನಿ, ಮಾಲೀಕರು","കമ്പനി, ഉടമ","ਕੰਪਨੀ, ਮਾਲਕ, ਠੇਕੇਦਾਰ"],
+ob_hint:["बाद में प्रोफाइल से बदल सकते हैं","Change later in Profile","प्रोफाइलमधून बदलू शकता","পরে বদলাতে পারবেন","બાદમાં બદલી શકાય","பின்னர் மாற்றலாம்","తర్వాత మార్చవచ్చు","ನಂತರ ಬದಲಿಸಬಹುದು","പിന്നീട് മാറ്റാം","ਬਾਅਦ ਵਿੱਚ ਬਦਲ ਸਕਦੇ ਹੋ"],
+tab_offer:["काम उपलब्ध","Jobs available","कामे उपलब्ध","কাজ আছে","કામ ઉપલબ્ધ","வேலைகள்","ఉద్యోగాలు","ಕೆಲಸ ಲಭ್ಯ","ജോലികൾ","ਕੰਮ ਉਪਲਬਧ"],
+tab_seek:["काम चाहने वाले","Job seekers","काम शोधणारे","কাজ খুঁজছেন","કામ શોધનારા","வேலை தேடுவோர்","పని కోరేవారు","ಕೆಲಸ ಹುಡುಕುವವರು","അന്വേഷിക്കുന്നവർ","ਕੰਮ ਚਾਹੁਣ ਵਾਲੇ"],
+s_offer:["काम देना है","Give work","काम द्यायचे आहे","কাজ দেব","કામ આપવું છે","வேலை கொடுக்க","పని ఇవ్వాలి","ಕೆಲಸ ಕೊಡಬೇಕು","ജോലി നൽകാൻ","ਕੰਮ ਦੇਣਾ ਹੈ"],
+s_seek:["काम चाहिए","Need work","काम हवे आहे","কাজ চাই","કામ જોઈએ","வேலை வேண்டும்","పని కావాలి","ಕೆಲಸ ಬೇಕು","ജോലി വേണം","ਕੰਮ ਚਾਹੀਦਾ"],
+g_labour:["मेहनत / कारीगरी","Labour & trades","कारागिरी कामे","শ্রম ও কারিগরি","મજૂરી / કારીગરી","தொழில் பணிகள்","శ్రమ","ಕಾರ್ಮಿಕ","തൊഴിൽ","ਮਿਹਨਤ / ਕਾਰੀਗਰੀ"],
+g_pro:["प्रोफेशनल / ऑफिस","Professional & office","ऑफिस कामे","অফিস","ઓફિસ","அலுவலகம்","ఆఫీస్","ಆಫೀಸ್","ഓഫീസ്","ਦਫ਼ਤਰੀ"],
+l_title_o:["पद / काम का नाम","Job title","कामाचे नाव","কাজের নাম","કામનું નામ","வேலை","పని పేరు","ಕೆಲಸ","ജോലി","ਕੰਮ ਦਾ ਨਾਮ"],
+l_title_s:["आप क्या काम करते हैं","Your work","तुम्ही काय काम करता","কী কাজ করেন","શું કામ કરો છો","உங்கள் வேலை","మీ పని","ನಿಮ್ಮ ಕೆಲಸ","നിങ്ങളുടെ ജോലി","ਕੀ ਕੰਮ ਕਰਦੇ ਹੋ"],
+ph_title_s:["जैसे: इलेक्ट्रीशियन","e.g. Electrician","इलेक्ट्रिशियन","ইলেকট্রিশিয়ান","ઇલેક્ટ્રિશિયન","எலக்ட்ரீஷியன்","ఎలక్ట్రీషియన్","ಎಲೆಕ್ಟ್ರಿಷಿಯನ್","ഇലക്ട്രീഷ്യൻ","ਇਲੈਕਟ੍ਰੀਸ਼ੀਅਨ"],
+l_firm:["कंपनी / मालिक का नाम","Company / owner name","कंपनी / मालक","কোম্পানি / মালিক","કંપની / માલિક","நிறுவனம்","కంపెనీ / యజమాని","ಕಂಪನಿ / ಮಾಲೀಕರು","കമ്പനി / ഉടമ","ਕੰਪਨੀ / ਮਾਲਕ"],
+l_openings:["कितने लोग चाहिए","Openings","किती लोक","কতজন","કેટલા લોકો","இடங்கள்","ఎంతమంది","ಎಷ್ಟು ಜನ","എത്ര പേർ","ਕਿੰਨੇ ਲੋਕ"],
+l_jtype:["काम का प्रकार","Job type","कामाचा प्रकार","কাজের ধরন","કામનો પ્રકાર","வேலை வகை","పని రకం","ಕೆಲಸದ ವಿಧ","ജോലി തരം","ਕੰਮ ਦੀ ਕਿਸਮ"],
+jt_full:["फुल टाइम","Full time","पूर्ण वेळ","ফুল টাইম","ફુલ ટાઇમ","முழு நேரம்","ఫుల్ టైమ్","ಪೂರ್ಣ ಸಮಯ","ഫുൾ ടൈം","ਫੁੱਲ ਟਾਈਮ"],
+jt_part:["पार्ट टाइम","Part time","अर्धवेळ","পার্ট টাইম","પાર્ટ ટાઇમ","பகுதி நேரம்","పార్ట్ టైమ్","ಅರೆಕಾಲಿಕ","പാർട്ട് ടൈം","ਪਾਰਟ ਟਾਈਮ"],
+jt_daily:["दिहाड़ी","Daily wage","रोजंदारी","দৈনিক","દૈનિક","தினக்கூலி","రోజువారీ","ದಿನಗೂಲಿ","ദിവസക്കൂലി","ਦਿਹਾੜੀ"],
+jt_free:["फ्रीलांस","Freelance","फ्रीलान्स","ফ্রিল্যান্স","ફ્રીલાન્સ","ஃப்ரீலான்ஸ்","ఫ్రీలాన్స్","ಫ್ರೀಲಾನ್ಸ್","ഫ്രീലാൻസ്","ਫ੍ਰੀਲਾਂਸ"],
+l_timing:["समय / शिफ्ट","Timing","वेळ","সময়","સમય","நேரம்","సమయం","ಸಮಯ","സമയം","ਸਮਾਂ"],
+ph_timing:["सुबह 9 से शाम 6","9 AM - 6 PM","9 ते 6","৯ - ৬","9 થી 6","9 - 6","9 - 6","9 - 6","9 - 6","9 ਤੋਂ 6"],
+l_qual:["शिक्षा","Education","शिक्षण","শিক্ষা","શિક્ષણ","கல்வி","విద్య","ವಿದ್ಯಾರ್ಹತೆ","വിദ്യാഭ്യാസം","ਪੜ੍ਹਾਈ"],
+q_any:["ज़रूरी नहीं","Not required","आवश्यक नाही","দরকার নেই","જરૂરી નથી","தேவையில்லை","అవసరం లేదు","ಅಗತ್ಯವಿಲ್ಲ","ആവശ്യമില്ല","ਜ਼ਰੂਰੀ ਨਹੀਂ"],
+q_8:["8वीं पास","8th","8 वी","অষ্টম","8મું","8ம்","8వ","8ನೇ","8","8ਵੀਂ"],
+q_10:["10वीं पास","10th","10 वी","দশম","10મું","10ம்","10వ","10ನೇ","10","10ਵੀਂ"],
+q_12:["12वीं पास","12th","12 वी","দ্বাদশ","12મું","12ம்","12వ","12ನೇ","12","12ਵੀਂ"],
+q_iti:["ITI / डिप्लोमा","ITI / Diploma","ITI","ITI","ITI","ITI","ITI","ITI","ITI","ITI"],
+q_grad:["ग्रेजुएट","Graduate","पदवीधर","স্নাতক","ગ્રેજ્યુએટ","பட்டதாரி","డిగ్రీ","ಪದವೀಧರ","ബിരുദം","ਗ੍ਰੈਜੂਏਟ"],
+q_pg:["पोस्ट ग्रेजुएट","Post graduate","पदव्युत्तर","স্নাতকোত্তর","પોસ્ટ ગ્રેજ્યુએટ","முதுகலை","పీజీ","ಸ್ನಾತಕೋತ್ತರ","ബിരുദാനന്തരം","ਪੋਸਟ ਗ੍ਰੈਜੂਏਟ"],
+l_exp:["अनुभव (साल)","Experience (yrs)","अनुभव","অভিজ্ঞতা","અનુભવ","அனுபவம்","అనుభవం","ಅನುಭವ","പരിചയം","ਤਜਰਬਾ"],
+ph_exp:["जैसे: 2","e.g. 2","2","২","2","2","2","2","2","2"],
+yrs:["साल","yrs","वर्षे","বছর","વર્ષ","ஆண்டு","సం.","ವರ್ಷ","വർഷം","ਸਾਲ"],
+l_age:["उम्र","Age","वय","বয়স","ઉંમર","வயது","వయస్సు","ವಯಸ್ಸು","പ്രായം","ਉਮਰ"],
+l_work:["पिछला काम","Past work","मागील काम","আগের কাজ","અગાઉનું કામ","முந்தைய வேலை","గత పని","ಹಿಂದಿನ ಕೆಲಸ","മുൻ ജോലി","ਪਿਛਲਾ ਕੰਮ"],
+ph_work:["कहाँ काम किया","Where you worked","कुठे काम केले","কোথায় কাজ করেছেন","ક્યાં કામ કર્યું","எங்கே வேலை","ఎక్కడ పని","ಎಲ್ಲಿ ಕೆಲಸ","എവിടെ ജോലി","ਕਿੱਥੇ ਕੰਮ ਕੀਤਾ"],
+l_join:["कब से","Joining","कधीपासून","কবে থেকে","ક્યારથી","எப்போது","ఎప్పటి నుండి","ಯಾವಾಗಲಿಂದ","എപ്പോൾ","ਕਦੋਂ ਤੋਂ"],
+j_now:["तुरंत","Immediately","त्वरित","এখনই","તાત્કાલિક","உடனடியாக","వెంటనే","ತಕ್ಷಣ","ഉടൻ","ਤੁਰੰਤ"],
+j_week:["एक हफ्ते में","Within a week","आठवड्यात","এক সপ্তাহে","અઠવાડિયામાં","ஒரு வாரத்தில்","వారంలో","ವಾರದಲ್ಲಿ","ഒരാഴ്ച","ਹਫ਼ਤੇ ਵਿੱਚ"],
+j_month:["एक महीने में","Within a month","महिन्यात","এক মাসে","મહિનામાં","ஒரு மாதத்தில்","నెలలో","ತಿಂಗಳಲ್ಲಿ","ഒരു മാസം","ਮਹੀਨੇ ਵਿੱਚ"],
+l_addr:["पूरा पता","Full address","पूर्ण पत्ता","ঠিকানা","સરનામું","முகவரி","చిరునామా","ವಿಳಾಸ","വിലാസം","ਪੂਰਾ ਪਤਾ"],
+l_perks:["सुविधाएँ","Perks","सुविधा","সুবিধা","સુવિધા","வசதிகள்","సౌకర్యాలు","ಸೌಲಭ್ಯಗಳು","സൗകര്യങ്ങൾ","ਸਹੂਲਤਾਂ"],
+p_food:["खाना","Food","जेवण","খাবার","જમવાનું","உணவு","భోజనం","ಊಟ","ഭക്ഷണം","ਖਾਣਾ"],
+p_stay:["रहना","Stay","राहणे","থাকা","રહેવાનું","தங்குமிடம்","వసతి","ವಸತಿ","താമസം","ਰਹਿਣਾ"],
+l_gender:["कौन आवेदन कर सकता है","Who can apply","कोण अर्ज करू शकते","কে আবেদন করবেন","કોણ અરજી","யார் விண்ணப்பிக்கலாம்","ఎవరు దరఖాస్తు","ಯಾರು ಅರ್ಜಿ","ആർക്ക് അപേക്ഷിക്കാം","ਕੌਣ ਅਪਲਾਈ"],
+gd_any:["सभी","Anyone","सर्व","সবাই","બધા","யாரும்","ఎవరైనా","ಯಾರಾದರೂ","ആർക്കും","ਸਾਰੇ"],
+gd_m:["पुरुष","Men","पुरुष","পুরুষ","પુરુષ","ஆண்கள்","పురుషులు","ಪುರುಷರು","പുരുഷന്മാർ","ਮਰਦ"],
+gd_f:["महिला","Women","महिला","মহিলা","મહિલા","பெண்கள்","మహిళలు","ಮಹಿಳೆಯರು","സ്ത്രീകൾ","ਔਰਤਾਂ"],
+l_gst:["GST नंबर","GST","GST","GST","GST","GST","GST","GST","GST","GST"],
+gst_badge:["GST दिया है","GST","GST","GST","GST","GST","GST","GST","GST","GST"],
+l_desc_o:["काम का ब्यौरा","Job details","तपशील","বিবরণ","વિગત","விவரம்","వివరాలు","ವಿವರ","വിവരങ്ങൾ","ਵੇਰਵਾ"],
+l_desc_s:["अपने बारे में","About you","तुमच्याबद्दल","আপনার সম্পর্কে","તમારા વિશે","உங்களைப் பற்றி","మీ గురించి","ನಿಮ್ಮ ಬಗ್ಗೆ","നിങ്ങളെക്കുറിച്ച്","ਆਪਣੇ ਬਾਰੇ"],
+close:["बंद करें","Close","बंद करा","বন্ধ করুন","બંધ કરો","மூடு","మూసివేయి","ಮುಚ್ಚಿ","അടയ്ക്കുക","ਬੰਦ ਕਰੋ"],
+views_l:["बार देखा","views","पाहिले","দেখা","જોવાયું","பார்வை","చూసారు","ವೀಕ್ಷಣೆ","കണ്ടു","ਵੇਖਿਆ"],
+rat_title:["रेटिंग और अनुभव","Ratings","रेटिंग","রেটিং","રેટિંગ","மதிப்பீடு","రేటింగ్","ರೇಟಿಂಗ್","റേറ്റിംഗ്","ਰੇਟਿੰਗ"],
+rat_none:["अभी कोई रेटिंग नहीं","No ratings yet","रेटिंग नाही","রেটিং নেই","રેટિંગ નથી","இல்லை","లేదు","ಇಲ್ಲ","ഇല്ല","ਰੇਟਿੰਗ ਨਹੀਂ"],
+rat_count:["{n} रेटिंग","{n} ratings","{n}","{n}","{n}","{n}","{n}","{n}","{n}","{n}"],
+rat_give:["रेटिंग दें","Rate now","रेटिंग द्या","রেটিং দিন","રેટિંગ આપો","மதிப்பிடவும்","రేటింగ్ ఇవ్వండి","ರೇಟಿಂಗ್ ನೀಡಿ","റേറ്റ് ചെയ്യുക","ਰੇਟਿੰਗ ਦਿਓ"],
+rat_ph:["अनुभव लिखें","Write experience","अनुभव लिहा","অভিজ্ঞতা লিখুন","અનુભવ લખો","அனுபவம்","అనుభవం","ಅನುಭವ","അനുഭവം","ਤਜਰਬਾ ਲਿਖੋ"],
+rat_btn:["भेजें","Submit","सबमिट","পাঠান","સબમિટ","சமர்ப்பி","సమర్పించు","ಸಲ್ಲಿಸಿ","സമർപ്പിക്കുക","ਭੇਜੋ"],
+rat_pick:["तारे चुनें","Pick stars","तारे निवडा","তারা বাছুন","તારા પસંદ","நட்சத்திரம்","స్టార్స్ ఎంచుకోండి","ಸ್ಟಾರ್ ಆರಿಸಿ","സ്റ്റാർ തിരഞ്ഞെടുക്കുക","ਤਾਰੇ ਚੁਣੋ"],
+rat_done:["रेटिंग सेव हो गई","Saved","सेव्ह झाले","সেভ হয়েছে","સેવ થયું","சேமிக்கப்பட்டது","సేవ్ అయింది","ಉಳಿಸಲಾಗಿದೆ","സേവ്","ਸੇਵ ਹੋ ਗਈ"],
+rat_own:["अपनी पोस्ट को रेट नहीं कर सकते","Cannot rate own post","स्वतःला रेट करू शकत नाही","নিজেকে নয়","પોતાને નહીં","முடியாது","చేయలేరు","ಮಾಡಲಾಗದು","സാധിക്കില്ല","ਨਹੀਂ ਕਰ ਸਕਦੇ"],
+anon:["यूज़र","User","वापरकर्ता","ব্যবহারকারী","વપરાશકર્તા","பயனர்","వినియోగదారు","ಬಳಕೆದಾರ","ഉപയോക്താവ്","ਯੂਜ਼ਰ"],
+stat_title:["मेरे आँकड़े","My stats","आकडेवारी","পরিসংখ্যান","આંકડા","புள்ளிவிவரம்","గణాంకాలు","ಅಂಕಿಅಂಶ","കണക്കുകൾ","ਅੰਕੜੇ"],
+stat_rating:["औसत रेटिंग","Avg rating","सरासरी","গড়","સરેરાશ","சராசரி","సగటు","ಸರಾಸರಿ","ശരാശരി","ਔਸਤ"],
+stat_views:["कुल देखा गया","Total views","एकूण","মোট","કુલ","மொத்தம்","మొత్తం","ಒಟ್ಟು","ആകെ","ਕੁੱਲ"],
+apply:["Apply Now","Apply Now","Apply Now","Apply Now","Apply Now","Apply Now","Apply Now","Apply Now","Apply Now","Apply Now"],
+applied:["Applied","Applied","Applied","Applied","Applied","Applied","Applied","Applied","Applied","Applied"],
+ap_own:["यह आपकी अपनी पोस्ट है।","Your own post.","तुमची पोस्ट आहे.","নিজের পোস্ট।","પોતાની પોસ્ટ.","சொந்த பதிவு.","సొంత పోస్ట్.","ಸ್ವಂತ ಪೋಸ್ಟ್.","സ്വന്തം പോസ്റ്റ്.","ਆਪਣੀ ਪੋਸਟ ਹੈ।"],
+edit:["एडिट","Edit","संपादित करा","এডিট","એડિટ","திருத்து","ఎడిట్","ಎಡಿಟ್","തിരുത്തുക","ਐਡਿਟ"],
+more:["और देखें","View more","अधिक पहा","আরও দেখুন","વધુ જુઓ","மேலும்","మరిన్ని","ಇನ್ನಷ್ಟು","കൂടുതൽ","ਹੋਰ ਵੇਖੋ"],
+urgent:["अर्जेंट हायरिंग","Urgent hiring","तातडीची","জরুরি","તાત્કાલિક","அவசரம்","అత్యవసరం","ತುರ್ತು","അടിയന്തരം","ਜ਼ਰੂਰੀ"],
+p_urgent:["अर्जेंट हायरिंग","Urgent hiring","तातडीची","জরুরি","તાત્કાલિક","அவசரம்","అత్యవసరం","ತುರ್ತು","അടിയന്തരം","ਜ਼ਰੂਰੀ"],
+sal:["सैलरी","Salary","पगार","বেতন","પગાર","சம்பளம்","జీతం","ಸಂಬಳ","ശമ്പളം","ਤਨਖਾਹ"],
+fresher:["फ्रेशर","Fresher","फ्रेशर","ফ্রেশার","ફ્રેશર","புதியவர்","ఫ్రెషర్","ಫ್ರೆಶರ್","ഫ്രഷർ","ਫ੍ਰੈਸ਼ਰ"],
+l_per:["सैलरी हिसाब","Salary period","प्रकार","ধরন","સમય","காலம்","కాలం","ಅವಧಿ","കാലയളവ്","ਹਿਸਾਬ"],
+per_month:["महीना","month","महिना","মাস","મહિનો","மாதம்","నెల","ತಿಂಗಳು","മാസം","ਮਹੀਨਾ"],
+per_day:["दिन","day","दिवस","দিন","દિવસ","நாள்","రోజు","ದಿನ","ദിവസം","ਦਿਨ"],
+per_week:["हफ्ता","week","आठवडा","সপ্তাহ","અઠવાડિયું","வாரம்","వారం","ವಾರ","ആഴ്ച","ਹਫ਼ਤਾ"],
+notif_title:["नोटिफिकेशन","Notifications","सूचना","নোটিফিকেশন","સૂચનાઓ","அறிவிப்புகள்","నోటిఫికేషన్‌లు","ಸೂಚನೆಗಳು","അറിയിപ്പുകൾ","ਸੂਚਨਾਵਾਂ"],
+notif_none:["कोई नोटिफिकेशन नहीं।","No notifications.","सूचना नाहीत.","নোটিফিকেশন নেই।","સૂચના નથી.","இல்லை.","లేవు.","ಇಲ್ಲ.","ഇല്ല.","ਕੋਈ ਸੂਚਨਾ ਨਹੀਂ।"],
+n_all:["सभी","All","सर्व","সব","બધા","அனைத்தும்","అన్నీ","ಎಲ್ಲಾ","എല്ലാം","ਸਾਰੇ"],
+n_rec:["आए हुए","Received","आलेले","প্রাপ্ত","મળેલા","பெற்றவை","వచ్చినవి","ಸ್ವೀಕರಿಸಿದ","ലഭിച്ചവ","ਆਏ ਹੋਏ"],
+n_sent:["मेरे आवेदन","Applied","माझे अर्ज","আমার আবেদন","મારી અરજી","விண்ணப்பித்தவை","దరఖాస్తు","ಅರ್ಜಿ","അപേക്ഷിച്ചവ","ਮੇਰੀਆਂ ਅਰਜ਼ੀਆਂ"],
+n_badge_rec:["आवेदन मिला","New application","नवीन अर्ज","আবেদন এসেছে","નવી અરજી","புதிய விண்ணப்பம்","కొత్త దరఖాస్తు","ಹೊಸ ಅರ್ಜಿ","പുതിയ അപേക്ഷ","ਅਰਜ਼ੀ ਮਿਲੀ"],
+n_badge_sent:["आपने आवेदन किया","You applied","अर्ज केला","আবেদন করেছেন","અરજી કરી","விண்ணப்பித்தீர்கள்","దరఖాస్తు చేశారు","ಅರ್ಜಿ ಸಲ್ಲಿಸಿದ್ದೀರಿ","അപേക്ഷിച്ചു","ਅਪਲਾਈ ਕੀਤਾ"],
+new_tag:["नया","New","नवीन","নতুন","નવું","புதிய","కొత్త","ಹೊಸ","പുതിയ","ਨਵਾਂ"],
+ap_on:["ने आवेदन किया:","applied for","यांनी अर्ज केला:","আবেদন করেছেন:","અરજી કરી:","விண்ணப்பித்தார்:","దరఖాస్తు చేశారు:","ಅರ್ಜಿ ಸಲ್ಲಿಸಿದ್ದಾರೆ:","അപേക്ഷിച്ചു:","ਨੇ ਅਪਲਾਈ ਕੀਤਾ:"],
+ap_sent_to:["आपने आवेदन किया:","You applied for","अर्ज केला:","আবেদন করেছেন:","અરજી કરી:","விண்ணப்பித்தீர்கள்:","దరఖాస్తు చేశారు:","ಅರ್ಜಿ ಸಲ್ಲಿಸಿದ್ದೀರಿ:","അപേക്ഷിച്ചു:","ਅਪਲਾਈ ਕੀਤਾ:"],
+ap_need_prof:["पहले प्रोफाइल में नाम और फोन सेव करें","Save name & phone in Profile first","नाव व फोन सेव्ह करा","নাম ও ফোন সেভ করুন","નામ અને ફોન સેવ કરો","பெயர் & எண் சேமி","పేరు, ఫోన్ సేవ్ చేయండి","ಹೆಸರು, ಫೋನ್ ಉಳಿಸಿ","പേരും ഫോണും സേവ്","ਨਾਮ ਤੇ ਫ਼ੋਨ ਸੇਵ ਕਰੋ"],
+ap_done:["आवेदन भेज दिया गया","Application sent","अर्ज पाठवला","আবেদন পাঠানো হয়েছে","અરજી મોકલાઈ","அனுப்பப்பட்டது","పంపబడింది","ಕಳುಹಿಸಲಾಗಿದೆ","അയച്ചു","ਅਰਜ਼ੀ ਭੇਜੀ ਗਈ"],
+l_email:["ईमेल","Email","ईमेल","ইমেল","ઇમેલ","மின்னஞ்சல்","ఇమెయిల్","ಇಮೇಲ್","ഇമെയിൽ","ਈਮੇਲ"],
+l_side:["पोस्ट प्रकार","Post type","प्रकार","ধরন","પ્રકાર","வகை","రకం","ವಿಧ","തരം","ਕਿਸਮ"],
+det:["देखें","View","पहा","দেখুন","જુઓ","பார்க்க","చూడండి","ನೋಡಿ","കാണുക","ਵੇਖੋ"]
+};
+
+const t = k => { const a = T[k]; return a ? (a[LI] || a[1] || a[0]) : k; };
+const LAB = ["Electrician","Plumber","Mason","Painter","Carpenter","Mechanic","Factory / Helper","Construction","Driver","Delivery","Security","Ghar ka kaam"];
+const PRO = ["Graphic Designer","IT / Software","Accountant","Office / Data Entry","Sales","Marketing","Tutor","Content Writer","HR / Reception","Manager"];
+const CATS = [...LAB, ...PRO, "Anya"];
+const CN = {
+"Electrician":["इलेक्ट्रीशियन","Electrician","इलेक्ट्रिशियन","ইলেকট্রিশিয়ান","ઇલેક્ટ્રિશિયન","எலக்ட்ரீஷியன்","ఎలక్ట్రీషియన్","ಎಲೆಕ್ಟ್ರಿಷಿಯನ್","ഇലക്ട്രീഷ്യൻ","ਇਲੈਕਟ੍ਰੀਸ਼ੀਅਨ"],
+"Plumber":["प्लंबर","Plumber","प्लंबर","প্লাম্বার","પ્લમ્બર","பிளம்பர்","ప్లంబర్","ಪ್ಲಂಬರ್","പ്ലംബർ","ਪਲੰਬਰ"],
+"Mason":["राजमिस्त्री","Mason","गवंडी","রাজমিস্ত্রি","કડિયો","மேஸ்திரி","మేస్త్రీ","ಮೇಸ್ತ್ರಿ","മേസൺ","ਰਾਜ ਮਿਸਤਰੀ"],
+"Painter":["पेंटर","Painter","पेंटर","পেইন্টার","પેઇન્ટર","பெயிண்டர்","పెయింటర్","ಪೇಂಟರ್","പെയിന്റർ","ਪੇਂਟਰ"],
+"Carpenter":["बढ़ई","Carpenter","सुतार","কাঠমিস্ত্রি","સુથાર","தச்சர்","వడ్రంగి","ಬಡಗಿ","ആശാരി","ਤਰਖਾਣ"],
+"Mechanic":["मैकेनिक","Mechanic","मेकॅनिक","মেকানিক","મિકેનિક","மெக்கானிக்","మెకానిక్","ಮೆಕ್ಯಾನಿಕ್","മെക്കാനിക്","ਮਕੈਨਿਕ"],
+"Factory / Helper":["फैक्ट्री / हेल्पर","Factory / Helper","फॅक्टरी / मदतनीस","কারখানা / হেল্পার","ફેક્ટરી / હેલ્પર","தொழிற்சாலை","ఫ్యాక్టరీ / హెల్పర్","ಫ್ಯಾಕ್ಟರಿ / ಹೆಲ್ಪರ್","ഫാക്ടറി / ഹെൽപ്പർ","ਫੈਕਟਰੀ / ਹੈਲਪਰ"],
+"Construction":["कंस्ट्रक्शन","Construction","बांधकाम","নির্মাণ","બાંધકામ","கட்டுமானம்","నిర్మాణం","ನಿರ್ಮಾಣ","നിർമ്മാണം","ਉਸਾਰੀ"],
+"Driver":["ड्राइवर","Driver","ड्रायव्हर","ড্রাইভার","ડ્રાઇવર","ஓட்டுநர்","డ్రైవర్","ಚಾಲಕ","ഡ്രൈവർ","ਡਰਾਈਵਰ"],
+"Delivery":["डिलीवरी","Delivery","डिलिव्हरी","ডেলিভারি","ડિલિવરી","டெலிவரி","డెలివరీ","ಡೆಲಿವರಿ","ഡെലിവറി","ਡਿਲੀਵਰੀ"],
+"Security":["सिक्योरिटी गार्ड","Security guard","सुरक्षा रक्षक","নিরাপত্তারক্ষী","સિક્યોરિટી ગાર્ડ","காவலாளி","సెక్యూరిటీ గార్డ్","ಸೆಕ್ಯುರಿಟಿ ಗಾರ್ಡ್","സെക്യൂരിറ്റി ഗാർഡ്","ਸਕਿਓਰਿਟੀ ਗਾਰਡ"],
+"Ghar ka kaam":["घरेलू काम","Household work","घरकाम","ঘরের কাজ","ઘરકામ","வீட்டு வேலை","ఇంటి పని","ಮನೆ ಕೆಲಸ","വീട്ടുജോലി","ਘਰੇਲੂ ਕੰਮ"],
+"Graphic Designer":["ग्राफिक डिज़ाइनर","Graphic designer","ग्राफिक डिझायनर","গ্রাফিক ডিজাইনার","ગ્રાફિક ડિઝાઇનર","கிராபிக் டிசைனர்","గ్రాఫిక్ డిజైనర్","ಗ್ರಾಫಿಕ್ ಡಿಸೈನರ್","ഗ്രാഫിക് ഡിസൈനർ","ਗ੍ਰਾਫਿਕ ਡਿਜ਼ਾਈਨਰ"],
+"IT / Software":["आईटी / सॉफ्टवेयर","IT / Software","आयटी / सॉफ्टवेअर","আইটি / সফটওয়্যার","આઇટી / સોફ્ટવેર","ஐடி / மென்பொருள்","ఐటీ / సాఫ్ట్‌వేర్","ಐಟಿ / ಸಾಫ್ಟ್‌ವೇರ್","ഐടി / സോഫ്റ്റ്‌വെയർ","ਆਈਟੀ / ਸਾਫਟਵੇਅਰ"],
+"Accountant":["अकाउंटेंट","Accountant","अकाउंटंट","হিসাবরক্ষক","એકાઉન્ટન્ટ","கணக்காளர்","అకౌంటెంట్","ಅಕೌಂಟೆಂಟ್","അക്കൗണ്ടന്റ്","ਅਕਾਊਂਟੈਂਟ"],
+"Office / Data Entry":["ऑफिस / डेटा एंट्री","Office / Data entry","ऑफिस / डेटा एंट्री","অফিস / ডেটা এন্ট্রি","ઓફિસ / ડેટા એન્ટ્રી","அலுவலகம்","ఆఫీస్ / డేటా ఎంట్రీ","ಆಫೀಸ್ / ಡೇಟಾ ಎಂಟ್ರಿ","ഓഫീസ് / ഡാറ്റാ എൻട്രി","ਦਫ਼ਤਰ / ਡਾਟਾ ਐਂਟਰੀ"],
+"Sales":["सेल्स","Sales","सेल्स","সেলস","સેલ્સ","விற்பனை","సేల్స్","ಸೇಲ್ಸ್","സെയിൽസ്","ਸੇਲਜ਼"],
+"Marketing":["मार्केटिंग","Marketing","मार्केटिंग","মার্কেটিং","માર્કેટિંગ","சந்தைப்படுத்தல்","మార్కెటింగ్","ಮಾರ್ಕೆಟಿಂಗ್","മാർക്കറ്റിംഗ്","ਮਾਰਕੀਟਿੰਗ"],
+"Tutor":["ट्यूटर / टीचर","Tutor / Teacher","शिक्षक","টিউটর / শিক্ষক","શિક્ષક","ஆசிரியர்","టీచర్","ಶಿಕ್ಷಕರು","ട്യൂട്ടർ","ਟਿਊਟਰ"],
+"Content Writer":["कंटेंट राइटर","Content writer","कंटेंट रायटर","কনটেন্ট রাইটার","કન્ટેન્ટ રાઇટર","எழுத்தாளர்","కంటెంట్ రైటర్","ಕಂಟೆಂಟ್ ರೈಟರ್","കണ്ടന്റ് റൈറ്റർ","ਕੰਟੈਂਟ ਰਾਈਟਰ"],
+"HR / Reception":["एचआर / रिसेप्शन","HR / Reception","एचआर / रिसेप्शन","এইচআর / রিসেপশন","એચઆર / રિસેપ્શન","எச்ஆர்","హెచ్ఆర్","ಎಚ್‌ಆರ್","എച്ച്ആർ","ਐਚਆਰ"],
+"Manager":["मैनेजर","Manager","मॅनेजर","ম্যানেজার","મેનેજર","மேலாளர்","మేనేజర్","ಮ್ಯಾನೇಜರ್","മാനേജർ","ਮੈਨੇਜਰ"],
+"Anya":["अन्य","Other","इतर","অন্যান্য","અન્ય","மற்றவை","ఇతర","ಇತರೆ","മറ്റുള്ളവ","ਹੋਰ"]
+};
+
+const STATES = ["Delhi","Maharashtra","Gujarat","Tamil Nadu","Karnataka","Telangana","Kerala","Haryana","Punjab","West Bengal"];
+const CITY_COORDS = {
+Delhi:[28.6139,77.2090],"New Delhi":[28.6139,77.2090],Noida:[28.5355,77.3910],Ghaziabad:[28.6692,77.4538],
+Gurugram:[28.4595,77.0266],Gurgaon:[28.4595,77.0266],Faridabad:[28.4089,77.3178],Panipat:[29.3909,76.9635],Ambala:[30.3782,76.7767],
+Mumbai:[19.0760,72.8777],Pune:[18.5204,73.8567],Nagpur:[21.1458,79.0882],Thane:[19.2183,72.9781],Nashik:[19.9975,73.7898],Solapur:[17.6599,75.9064],Kolhapur:[16.7050,74.2433],
+Ahmedabad:[23.0225,72.5714],Surat:[21.1702,72.8311],Vadodara:[22.3072,73.1812],Rajkot:[22.3039,70.8022],Bhavnagar:[21.7645,72.1519],
+Chennai:[13.0827,80.2707],Coimbatore:[11.0168,76.9558],Madurai:[9.9252,78.1198],Tiruchirappalli:[10.7905,78.7047],Salem:[11.6643,78.1460],
+Bengaluru:[12.9716,77.5946],Bangalore:[12.9716,77.5946],Mysuru:[12.2958,76.6394],Mangaluru:[12.9141,74.8560],Hubballi:[15.3647,75.1240],
+Hyderabad:[17.3850,78.4867],Warangal:[17.9689,79.5941],Nizamabad:[18.6725,78.0941],
+Kochi:[9.9312,76.2673],Thiruvananthapuram:[8.5241,76.9366],Kozhikode:[11.2588,75.7804],Thrissur:[10.5276,76.2144],
+Chandigarh:[30.7333,76.7794],Ludhiana:[30.9010,75.8573],Amritsar:[31.6340,74.8723],Jalandhar:[31.3260,75.5762],Patiala:[30.3398,76.3869],
+Kolkata:[22.5726,88.3639],Howrah:[22.5958,88.2636],Siliguri:[26.7271,88.3953],Durgapur:[23.5204,87.3119],Asansol:[23.6739,86.9524]
+};
+const CITY_MAP = {};
+Object.keys(CITY_COORDS).forEach(k => CITY_MAP[k.toLowerCase()] = CITY_COORDS[k]);
+const CITY_ALIASES = {"दिल्ली":"delhi","नोएडा":"noida","गाजियाबाद":"ghaziabad","गुरुग्राम":"gurugram","गुड़गांव":"gurugram","फरीदाबाद":"faridabad","मुंबई":"mumbai","पुणे":"pune","बेंगलुरु":"bengaluru","हैदराबाद":"hyderabad","चेन्नई":"chennai","कोलकाता":"kolkata","अहमदाबाद":"ahmedabad","सूरत":"surat","नागपुर":"nagpur","लुधियाना":"ludhiana","अमृतसर":"amritsar","चंडीगढ़":"chandigarh","कोच्चि":"kochi"};
+Object.keys(CITY_ALIASES).forEach(k => CITY_MAP[k] = CITY_MAP[CITY_ALIASES[k]]);
+
+const NCR_LOCAL = {Delhi:["दिल्ली","Delhi"],Noida:["नोएडा","Noida"],Ghaziabad:["गाजियाबाद","Ghaziabad"],Gurugram:["गुरुग्राम","Gurugram"],Faridabad:["फरीदाबाद","Faridabad"]};
+const catName = c => CN[c] ? (CN[c][LI] || CN[c][1]) : (c || "");
+const cityName = c => (NCR_LOCAL[c] && LI === 0) ? NCR_LOCAL[c][0] : (c || "");
+const OTYPES = ["company","owner","contractor","shop","individual"];
+const QUAL = ["any","8","10","12","iti","grad","pg"], JT = ["full","part","daily","free"], JOIN = ["now","week","month"], GEND = ["any","m","f"], PER = ["month","day","week"];
+
+const IC = {
+bolt:'<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>',
+wrench:'<path d="M14.7 6.3a4 4 0 0 0-5.4 5.1L3 17.7 6.3 21l6.3-6.3a4 4 0 0 0 5.1-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/>',
+hammer:'<path d="M14 4l6 6-3 3-6-6zM12 8L3 17l4 4 9-9"/>',
+roller:'<path d="M5 4h12v5H5zM17 6.5h2.5v5H12V14M12 14v6"/>',
+truck:'<path d="M2 6h11v9H2zM13 9h4l3 3v3h-7"/><circle cx="6" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/>',
+factory:'<path d="M3 21V11l6 4v-4l6 4V5h6v16z"/>',
+shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>',
+house:'<path d="M3 11l9-8 9 8v10H3zM9 21v-6h6v6"/>',
+palette:'<path d="M12 3a9 9 0 1 0 0 18c1.5 0 2-1 1.5-2s-.5-2 1-2H17a4 4 0 0 0 4-4c0-5-4-10-9-10z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7.5" r="1"/><circle cx="14.5" cy="7.5" r="1"/>',
+code:'<path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/>',
+chart:'<path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/>',
+book:'<path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2zM4 19V5M9 7h6"/>',
+brief:'<path d="M3 8h18v12H3zM9 8V5h6v3M3 13h18"/>',
+pen:'<path d="M4 20l1-5L16 4l4 4L9 19zM14 6l4 4"/>'
+};
+const CATICON = {"Electrician":"bolt","Plumber":"wrench","Mason":"hammer","Painter":"roller","Carpenter":"hammer","Mechanic":"wrench","Factory / Helper":"factory","Construction":"hammer","Driver":"truck","Delivery":"truck","Security":"shield","Ghar ka kaam":"house","Graphic Designer":"palette","IT / Software":"code","Accountant":"chart","Office / Data Entry":"brief","Sales":"chart","Marketing":"chart","Tutor":"book","Content Writer":"pen","HR / Reception":"brief","Manager":"brief","Anya":"brief"};
+const iconFor = c => IC[CATICON[c] || "brief"];
+const EYE = '<svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>';
+
+let uid = null, posts = [], ratings = [], unsub = null, unsubR = null, signup = false, prof = {};
+let incoming = [], outgoing = [], myApps = new Set(), unsubA = null, unsubM = null, editId = null, notifOpen = false, notifTab = "all", newIds = new Set();
+let homeTab = "offer", feedMode = "all", postSide = "offer", curId = null, rateVal = 0;
+let userLoc = null, nearMode = false, postLat = null, postLng = null;
+try { const ul = JSON.parse(localStorage.getItem("uloc") || "null"); if (ul && typeof ul.lat === "number") { userLoc = ul; nearMode = true; } } catch (e) {}
+let seen = new Set();
+try { seen = new Set(JSON.parse(sessionStorage.getItem("seen") || "[]")); } catch (e) {}
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>'"]/g, m => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[m]));
+const has = v => v !== undefined && v !== null && v !== "";
+const kvRaw = (label, v) => has(v) ? `<div class="kv"><span>${esc(label)}</span><b>${esc(v)}</b></div>` : "";
+const kv = (k, v) => kvRaw(t(k), v);
+
+$("cities_dl").innerHTML = Object.keys(CITY_COORDS).map(c => `<option value="${c}">`).join("");
+
+function fillSel(sel, items, nameFn, first) {
+  const v = sel.value;
+  sel.innerHTML = (first ? `<option value="">${first}</option>` : "") + items.map(c => `<option value="${c}">${nameFn(c)}</option>`).join("");
+  if (v) sel.value = v;
+}
+function fillKeys(sel, keys, pre, first) { fillSel(sel, keys, k => t(pre + k), first); }
+function fillCats(sel, first) {
+  const v = sel.value, o = c => `<option value="${c}">${catName(c)}</option>`;
+  sel.innerHTML = (first ? `<option value="">${first}</option>` : "") +
+    `<optgroup label="${t("g_labour")}">${LAB.map(o).join("")}</optgroup><optgroup label="${t("g_pro")}">${PRO.map(o).join("")}</optgroup>${o("Anya")}`;
+  if (v) sel.value = v;
+}
+function buildChips() {
+  const cur = $("fc").value;
+  $("chips").innerHTML = ["", ...CATS].map(c => `<button class="chip${c === cur ? " on" : ""}" data-chip="${c}">${c ? catName(c) : t("all")}</button>`).join("");
+}
+$("chips").onclick = e => {
+  const b = e.target.closest("[data-chip]"); if (!b) return;
+  $("fc").value = b.dataset.chip; buildChips(); render();
+};
+function setSide(s) {
+  postSide = s;
+  $("new").classList.toggle("side-offer", s === "offer");
+  $("new").classList.toggle("side-seek", s === "seek");
+  document.querySelectorAll("#sidetabs button").forEach(b => b.classList.toggle("on", b.dataset.side === s));
+  $("t").placeholder = t(s === "offer" ? "ph_title" : "ph_title_s");
+}
+document.querySelectorAll("#sidetabs button").forEach(b => b.onclick = () => setSide(b.dataset.side));
+function syncSeg() { document.querySelectorAll("#seg button").forEach(b => b.classList.toggle("on", b.dataset.h === homeTab)); }
+function syncMode() { document.querySelectorAll("#mbar button").forEach(b => b.classList.toggle("on", b.dataset.m === feedMode)); }
+document.querySelectorAll("#seg button").forEach(b => b.onclick = () => {
+  homeTab = b.dataset.h;
+  if (feedMode === "emp" && homeTab === "offer") { feedMode = "all"; syncMode(); }
+  syncSeg(); render();
+});
+document.querySelectorAll("#mbar button").forEach(b => b.onclick = () => {
+  feedMode = b.dataset.m;
+  if (feedMode === "emp") { homeTab = "seek"; syncSeg(); }
+  syncMode(); render();
+});
+$("goProf").onclick = () => showTab("profile");
+
+function applyLang() {
+  document.documentElement.lang = LANGS[LI];
+  document.querySelectorAll("[data-i18n]").forEach(e => e.textContent = t(e.dataset.i18n));
+  document.querySelectorAll("[data-ph]").forEach(e => e.placeholder = t(e.dataset.ph));
+  fillSel($("fstate"), STATES, s => s, t("all_states"));
+  fillSel($("state"), STATES, s => s, t("choose"));
+  fillSel($("pstate"), STATES, s => s, t("choose"));
+  fillCats($("c")); fillCats($("pcat"), t("choose")); fillCats($("pecat"), t("choose"));
+  fillKeys($("otype"), OTYPES, "ot_"); fillKeys($("potype"), OTYPES, "ot_");
+  fillKeys($("ql"), QUAL, "q_", t("choose")); fillKeys($("pql"), QUAL, "q_", t("choose"));
+  fillKeys($("pper"), PER, "per_", "—"); fillKeys($("jt"), JT, "jt_"); fillKeys($("jn"), JOIN, "j_"); fillKeys($("gd"), GEND, "gd_");
+  buildChips();
+  $("atitle").textContent = signup ? t("newacc") : t("login");
+  $("go").textContent = signup ? t("signup") : t("login");
+  $("sw").textContent = signup ? t("haveacc") : t("mkacc");
+  $("lang").value = LANGS[LI];
+  setSide(postSide);
+  render(); renderSummary();
+  $("save").textContent = t(editId ? "btn_update" : "btn_post");
+  if (curId) renderDetail(); else if (notifOpen) renderNotifs();
+}
+$("lang").onchange = () => {
+  LI = Math.max(0, LANGS.indexOf($("lang").value));
+  try { localStorage.setItem("lang", LANGS[LI]); } catch (e) {}
+  applyLang();
+};
+
+/* ---------- Terms & Conditions Modal (English, positive & clear) ---------- */
+$("tncLink").onclick = e => {
+  e.preventDefault();
+  curId = null; notifOpen = false;
+  $("dbody").innerHTML = `
+  <div class="shd"><div class="ti" style="font-size:18px">Terms &amp; Conditions</div><button class="xbtn" data-close="1" aria-label="Close">✕</button></div>
+  <div class="tncb"><b>How Nkanical Jobs Helps You:</b><br>We connect workers, skilled technicians, professionals, and employers directly across India's top cities so you can find jobs or hire trusted talent fast—with zero middleman commission.</div>
+  <div class="tncp">
+    <p><b>1. Platform Role (IT Act, 2000 – Section 79 &amp; IT Rules, 2021):</b><br>Nkanical Jobs only works as a digital job-discovery platform to connect job seekers and employers. We do not participate in personal dealings, negotiations, or offline arrangements between users.</p>
+    <p><b>2. Voluntary Choice (Indian Contract Act, 1872):</b><br>Applying for a job, hiring someone, or visiting a workplace is completely your own free decision.</p>
+    <p><b>3. Your Financial &amp; Personal Safety (BNS, 2023 – Section 318):</b><br>Please never pay any advance money before starting work, and always verify details before visiting an unfamiliar place. If any user independently gives or takes money, visits an unknown location, or faces any fraud or dispute, it will be solely at their own risk—Nkanical Jobs, its owners, and its employees bear no responsibility or financial liability for any such loss.</p>
+  </div>
+  <button type="button" id="tncAgreeBtn" style="width:100%;margin-top:6px">I Agree to Terms &amp; Conditions</button>`;
+  $("dlg").classList.remove("hide");
+};
+
+/* ---------- Location & Distance ---------- */
+function haversineKm(lat1, lon1, lat2, lon2) {
+  const R = 6371, rad = d => d * Math.PI / 180;
+  const dLat = rad(lat2 - lat1), dLon = rad(lon2 - lon1);
+  const a = Math.sin(dLat / 2) ** 2 + Math.cos(rad(lat1)) * Math.cos(rad(lat2)) * Math.sin(dLon / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+function coordsOf(p) {
+  if (typeof p.lat === "number" && typeof p.lng === "number") return {lat: p.lat, lng: p.lng, approx: false};
+  const c = CITY_MAP[String(p.city || "").trim().toLowerCase()];
+  return c ? {lat: c[0], lng: c[1], approx: true} : null;
+}
+function distOf(p) {
+  if (!userLoc) return null;
+  const pc = coordsOf(p);
+  if (!pc) return null;
+  return {km: haversineKm(userLoc.lat, userLoc.lng, pc.lat, pc.lng), approx: pc.approx};
+}
+function fmtDist(d) {
+  if (!d) return "";
+  const pre = d.approx ? "~" : "";
+  if (d.km < 1) return pre + Math.max(50, Math.round(d.km * 1000 / 50) * 50) + " m";
+  return pre + (d.km < 10 ? d.km.toFixed(1) : Math.round(d.km)) + " km";
+}
+function syncLocUI() {
+  if (userLoc && nearMode) {
+    $("locMsg").textContent = "📍 " + t("loc_on");
+    $("locMsg").classList.remove("hide");
+  } else {
+    $("locMsg").classList.add("hide");
+  }
+}
+function requestUserLocation() {
+  if (!navigator.geolocation) { alert(t("loc_err")); return; }
+  $("locMsg").textContent = t("loc_getting");
+  $("locMsg").classList.remove("hide");
+  navigator.geolocation.getCurrentPosition(pos => {
+    userLoc = {lat: pos.coords.latitude, lng: pos.coords.longitude};
+    try { localStorage.setItem("uloc", JSON.stringify(userLoc)); } catch (e) {}
+    nearMode = true;
+    syncLocUI();
+    render();
+    if (curId) renderDetail();
+  }, () => {
+    $("locMsg").textContent = t("loc_err");
+    $("locMsg").classList.remove("hide");
+  }, {enableHighAccuracy: true, timeout: 10000});
+}
+$("getLoc").onclick = () => {
+  if (!navigator.geolocation) { $("locStat").textContent = t("loc_err"); return; }
+  $("locStat").textContent = t("loc_getting");
+  navigator.geolocation.getCurrentPosition(async pos => {
+    postLat = pos.coords.latitude; postLng = pos.coords.longitude;
+    userLoc = {lat: postLat, lng: postLng}; nearMode = true;
+    try { localStorage.setItem("uloc", JSON.stringify(userLoc)); } catch (e) {}
+    $("locStat").textContent = "✓ " + t("loc_saved");
+    try {
+      const res = await fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${postLat}&lon=${postLng}&accept-language=en`);
+      const j = await res.json();
+      const ad = j.address || {};
+      const st = ad.state || "";
+      const mState = STATES.find(x => x.toLowerCase() === st.toLowerCase() || st.toLowerCase().includes(x.toLowerCase()));
+      if (mState) $("state").value = mState;
+      const ct = ad.city || ad.town || ad.village || ad.state_district || "";
+      if (ct && !$("city").value) $("city").value = ct;
+      const ar = ad.suburb || ad.neighbourhood || ad.road || "";
+      if (ar && !$("area").value) $("area").value = ar;
+    } catch (e) {}
+  }, () => { $("locStat").textContent = t("loc_err"); }, {enableHighAccuracy: true, timeout: 10000});
+};
+
+/* ---------- Auth ---------- */
+$("agreeChk").onchange = () => { $("go").disabled = !$("agreeChk").checked; $("amsg").textContent = ""; };
+$("sw").onclick = e => { e.preventDefault(); signup = !signup; $("amsg").textContent = ""; applyLang(); };
+$("go").onclick = async () => {
+  if (!$("agreeChk").checked) { $("amsg").textContent = t("leg_req"); return; }
+  const em = $("em").value.trim(), pw = $("pw").value;
+  if (!em || pw.length < 6) { $("amsg").textContent = t("e_fill"); return; }
+  try {
+    if (signup) await createUserWithEmailAndPassword(auth, em, pw);
+    else await signInWithEmailAndPassword(auth, em, pw);
+  } catch (err) {
+    const m = {"auth/email-already-in-use":"e_used","auth/invalid-credential":"e_cred","auth/invalid-email":"e_mail","auth/weak-password":"e_weak"};
+    $("amsg").textContent = m[err.code] ? t(m[err.code]) : t("e_other") + " (" + err.code + ")";
+  }
+};
+$("fg").onclick = async e => {
+  e.preventDefault();
+  const em = $("em").value.trim();
+  if (!em) { $("amsg").textContent = t("r_mail"); return; }
+  try { await sendPasswordResetEmail(auth, em); $("amsg").textContent = t("r_sent"); }
+  catch { $("amsg").textContent = t("r_fail"); }
+};
+$("out").onclick = () => { $("agreeChk").checked = false; $("go").disabled = true; signOut(auth); };
+
+async function shareIt(text, url) {
+  try { if (navigator.share) { await navigator.share({title: "Nkanical Jobs", text, url}); return; } }
+  catch (e) { if (e && e.name === "AbortError") return; }
+  const full = text + " " + url;
+  try { await navigator.clipboard.writeText(full); alert(t("copied")); }
+  catch { prompt(t("copy_prompt"), full); }
+}
+$("shareApp").onclick = () => shareIt(t("sh_app"), location.origin + location.pathname);
+
+onAuthStateChanged(auth, user => {
+  if (user) {
+    uid = user.uid;
+    $("pav").textContent = (user.email || "?").charAt(0).toUpperCase();
+    $("pem").textContent = user.email || "";
+    $("auth").classList.add("hide");
+    $("app").classList.remove("hide"); $("bnav").classList.remove("hide");
+    loadProfile(user);
+    syncLocUI();
+    if (unsub) unsub();
+    unsub = onSnapshot(collection(db, "posts"), s => { posts = s.docs.map(d => ({id: d.id, ...d.data()})); render(); }, () => render());
+    if (unsubR) unsubR();
+    unsubR = onSnapshot(collection(db, "ratings"), s => {
+      ratings = s.docs.map(d => ({id: d.id, ...d.data()}));
+      render(); renderSummary();
+      if (curId && document.activeElement && document.activeElement.id !== "rt") renderDetail();
+    }, () => {});
+    if (unsubA) unsubA();
+    unsubA = onSnapshot(query(collection(db, "applications"), where("postOwner", "==", user.uid)), s => {
+      incoming = s.docs.map(d => ({id: d.id, ...d.data()}));
+      updateBell(); if (notifOpen) renderNotifs();
+    }, () => {});
+    if (unsubM) unsubM();
+    unsubM = onSnapshot(query(collection(db, "applications"), where("applicant", "==", user.uid)), s => {
+      outgoing = s.docs.map(d => ({id: d.id, ...d.data()}));
+      myApps = new Set(outgoing.map(d => d.postId));
+      updateBell(); render();
+      if (notifOpen) renderNotifs();
+      if (curId && document.activeElement && document.activeElement.id !== "rt") renderDetail();
+    }, () => {});
+  } else {
+    uid = null; posts = []; ratings = []; prof = {}; curId = null;
+    if (unsub) { unsub(); unsub = null; }
+    if (unsubR) { unsubR(); unsubR = null; }
+    if (unsubA) { unsubA(); unsubA = null; }
+    if (unsubM) { unsubM(); unsubM = null; }
+    incoming = []; outgoing = []; myApps = new Set(); notifOpen = false; notifTab = "all"; editId = null; updateBell();
+    $("agreeChk").checked = false; $("go").disabled = true;
+    $("app").classList.add("hide"); $("bnav").classList.add("hide");
+    $("dlg").classList.add("hide"); $("ob").classList.add("hide");
+    $("auth").classList.remove("hide");
+  }
+});
+
+/* ---------- Tabs ---------- */
+const TABS = ["feed","new","mine","favs","profile","help"];
+function showTab(tb) {
+  const navT = (tb === "mine" || tb === "help" || tb === "favs") ? "profile" : tb;
+  document.querySelectorAll("#bnav button[data-t]").forEach(x => x.classList.toggle("on", x.dataset.t === navT));
+  TABS.forEach(s => $(s).classList.toggle("hide", s !== tb));
+  window.scrollTo(0, 0);
+  render();
+}
+document.querySelectorAll("#bnav button[data-t]").forEach(b => b.onclick = () => { if (b.dataset.t === "new") stopEdit(); showTab(b.dataset.t); });
+$("bell").onclick = () => openNotifs();
+$("pmine").onclick = () => showTab("mine");
+$("pfavs").onclick = () => showTab("favs");
+$("phelp").onclick = () => showTab("help");
+$("sbtn").onclick = () => { showTab("feed"); $("sbar").classList.toggle("hide"); if (!$("sbar").classList.contains("hide")) $("q").focus(); };
+["q","fstate","fcity"].forEach(i => $(i).oninput = render);
+
+/* ---------- Matching / Suggestions / Best Employee ---------- */
+function monthlyPay(val, per) {
+  const m = String(val || "").replace(/,/g, "").match(/\d+(\.\d+)?/);
+  if (!m) return 0;
+  let n = parseFloat(m[0]);
+  if (per === "day") n *= 26;
+  else if (per === "week") n *= 4;
+  return n;
+}
+function userPref() {
+  const isEmp = prof.role === "employer";
+  const cat = isEmp ? (prof.ecat || "") : (prof.cat || "");
+  const sal = monthlyPay(isEmp ? prof.esal : prof.salary, "month");
+  const wishCats = new Set((prof.favs || []).map(id => posts.find(x => x.id === id)?.category).filter(Boolean));
+  return {cat, sal, wishCats, hasPref: !!(cat || sal > 0)};
+}
+function matchScore(p) {
+  const {cat, sal, wishCats} = userPref(), s = sideOf(p), r = ratingOf(p.owner);
+  let sc = 0;
+  if (cat && p.category === cat) sc += 50;
+  else if (wishCats.has(p.category)) sc += 30;
+  const pSal = monthlyPay(p.pay, p.payper);
+  if (sal > 0 && pSal > 0) {
+    if (Math.abs(pSal - sal) / sal <= 0.35) sc += 30;
+    else if (s === "offer" && pSal >= sal) sc += 22;
+    else if (s === "seek" && pSal <= sal) sc += 22;
+  }
+  if (prof.state && p.state === prof.state) sc += 12;
+  if (prof.city && p.city && p.city.toLowerCase() === prof.city.toLowerCase()) sc += 15;
+  const d = distOf(p);
+  if (d && d.km <= 30) sc += 15;
+  if (r) sc += Math.round(r.avg * 3);
+  return sc;
+}
+
+/* ---------- Ratings / posts ---------- */
+const sideOf = p => p.side || (p.kind === "service" ? "seek" : "offer");
+const otypeLabel = p => p.otype ? t("ot_" + p.otype) : t("c_emp");
+const workerLabel = p => p.category ? catName(p.category) : t("c_worker");
+const isFav = id => Array.isArray(prof.favs) && prof.favs.includes(id);
+
+function ratingOf(owner) {
+  const list = ratings.filter(x => x.target === owner);
+  if (!list.length) return null;
+  return {avg: list.reduce((a, x) => a + (x.stars || 0), 0) / list.length, n: list.length, list};
+}
+function ago(ts) {
+  if (!ts) return "";
+  const m = Math.floor((Date.now() - ts) / 60000);
+  if (m < 1) return t("ago_now");
+  if (m < 60) return t("ago_min").replace("{n}", m);
+  const h = Math.floor(m / 60);
+  if (h < 24) return t("ago_hr").replace("{n}", h);
+  return t("ago_day").replace("{n}", Math.floor(h / 24));
+}
+const placeOf = p => [p.area, cityName(p.city), p.state].filter(Boolean).join(", ");
+const payStr = p => p.pay ? p.pay + (p.payper ? " / " + t("per_" + p.payper) : "") : "";
+
+function card(p) {
+  const s = sideOf(p), r = ratingOf(p.owner);
+  const nm = p.name || t("noname");
+  const whoLabel = s === "offer" ? otypeLabel(p) : workerLabel(p);
+  const head = catName(p.category);
+  const tags = [];
+  if (s === "offer" && p.jtype) tags.push(t("jt_" + p.jtype));
+  if (p.qual && p.qual !== "any") tags.push(t("q_" + p.qual));
+  const pay = payStr(p);
+  const d = distOf(p);
+  const nearHtml = d
+    ? `<div class="nearline">📍 ${t("near_me")}: <span class="dbadge">${esc(fmtDist(d))} ${t("away")}</span></div>`
+    : (!userLoc ? `<div class="nearline"><button type="button" class="dask" data-near="1">📍 ${t("near_me")}</button></div>` : `<div class="nearline">📍 ${t("near_me")}: —</div>`);
+  const isMatch = matchScore(p) >= 45;
+  const isTop = r && r.avg >= 4;
+  const applyBtn = myApps.has(p.id)
+    ? `<button class="ab ok" disabled>✓ ${t("applied")}</button>`
+    : `<button class="ab pr" data-apply="${p.id}">${t("apply")}</button>`;
+  const fav = isFav(p.id);
+  const favBtn = `<button class="ab${fav ? " fav" : ""}" data-fav="${p.id}">${fav ? "♥" : "♡"} ${t(fav ? "fav_on" : "fav")}</button>`;
+  return `<article class="jc" data-open="${p.id}">
+  <svg class="wm" viewBox="0 0 24 24">${iconFor(p.category)}</svg>
+  <div class="ch"><span class="cl"><svg viewBox="0 0 24 24">${iconFor(p.category)}</svg></span><span class="cx">${esc(head)}</span>${p.featured ? `<span class="tg ft">${t("featured")}</span>` : ""}${isMatch ? `<span class="tg mtc">${t("match_tag")}</span>` : ""}${isTop ? `<span class="tg be">${t("top_emp")}</span>` : ""}</div>
+  <div class="hl">${esc(p.title)}</div>
+  ${p.urgent ? `<i class="ur">${t("urgent")}</i>` : ""}
+  ${pay ? `<div class="sal"><span>${t(s === "offer" ? "sal" : "l_psal")}:</span> ${esc(pay)}</div>` : ""}
+  <div class="r2"><div>${esc(whoLabel)}: <b>${esc(nm)}</b>${p.gst ? ` <span class="gb">${t("gst_badge")}</span>` : ""}</div>${nearHtml}</div>
+  ${tags.length ? `<div class="tags">${tags.map(x => `<span class="tg">${esc(x)}</span>`).join("")}</div>` : ""}
+  <div class="r3">${r ? `<span class="st">★ ${r.avg.toFixed(1)}</span><span>(${r.n})</span>` : ""}<span>${EYE} ${p.views || 0}</span><span>${ago(p.createdAt)}</span></div>
+  <div class="acts">${applyBtn}${favBtn}<button class="vm" data-det="${p.id}">${t("more")} ›</button></div>
+  </article>`;
+}
+
+function render() {
+  if (!uid) return;
+  const q = $("q").value.trim().toLowerCase(), fc = $("fc").value, fstate = $("fstate").value, fcity = $("fcity").value.trim().toLowerCase();
+  const {hasPref} = userPref();
+  $("sugHint").classList.toggle("hide", !(feedMode === "sug" && !hasPref));
+  const sorted = [...posts].sort((a, b) => {
+    if (feedMode === "sug") {
+      const ds = matchScore(b) - matchScore(a);
+      if (ds !== 0) return ds;
+    } else if (feedMode === "emp") {
+      const ra = ratingOf(a.owner), rb = ratingOf(b.owner);
+      const sa = ra ? ra.avg * Math.log(ra.n + 1.5) : 0, sb = rb ? rb.avg * Math.log(rb.n + 1.5) : 0;
+      if (sb !== sa) return sb - sa;
+      const ea = +(a.exp || 0), eb = +(b.exp || 0);
+      if (eb !== ea) return eb - ea;
+      return (b.views || 0) - (a.views || 0);
+    }
+    const ft = (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
+    if (ft) return ft;
+    if (nearMode && userLoc) {
+      const da = distOf(a)?.km ?? 999999, db_ = distOf(b)?.km ?? 999999;
+      if (da !== db_) return da - db_;
+    }
+    return (b.createdAt || 0) - (a.createdAt || 0);
+  });
+  let f = sorted.filter(p => {
+    if (sideOf(p) !== homeTab || (p.reports || []).length >= 3) return false;
+    if (fc && p.category !== fc) return false;
+    if (fstate && (p.state || "") !== fstate) return false;
+    if (fcity && ![p.city, cityName(p.city), p.area].join(" ").toLowerCase().includes(fcity)) return false;
+    if (q && ![p.title, p.desc, p.category, catName(p.category), p.name, p.area, p.city, cityName(p.city), p.state, p.otype ? otypeLabel(p) : ""].join(" ").toLowerCase().includes(q)) return false;
+    return true;
+  });
+  if (feedMode === "sug" && hasPref) {
+    const matched = f.filter(p => matchScore(p) > 0);
+    if (matched.length) f = matched;
+  }
+  $("list").innerHTML = f.length ? f.map(card).join("") : `<p class="mu">${t("empty_feed")}</p>`;
+  const m = [...posts].filter(p => p.owner === uid).sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+  $("pcount").textContent = t("my_count") + ": " + m.length;
+  $("mlist").innerHTML = m.length ? m.map(card).join("") : `<p class="mu">${t("empty_mine")}</p>`;
+  const favPosts = [...posts].filter(p => isFav(p.id) && (p.reports || []).length < 3).sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+  $("pfavcount").textContent = favPosts.length ? " (" + favPosts.length + ")" : "";
+  $("favlist").innerHTML = favPosts.length ? favPosts.map(card).join("") : `<p class="mu">${t("empty_favs")}</p>`;
+  renderStats(m);
+}
+function renderStats(m) {
+  const r = ratingOf(uid), views = m.reduce((a, p) => a + (p.views || 0), 0);
+  $("pstats").innerHTML = kv("stat_rating", r ? "★ " + r.avg.toFixed(1) + " (" + r.n + ")" : t("rat_none")) + kv("stat_views", String(views));
+}
+
+async function toggleFav(id) {
+  if (!uid) return;
+  const favs = Array.isArray(prof.favs) ? [...prof.favs] : [];
+  const idx = favs.indexOf(id);
+  if (idx >= 0) favs.splice(idx, 1);
+  else favs.push(id);
+  prof.favs = favs;
+  try { localStorage.setItem("favs_" + uid, JSON.stringify(favs)); } catch (e) {}
+  render();
+  if (curId === id) renderDetail();
+  try { await setDoc(doc(db, "users", uid), {favs, updatedAt: Date.now()}, {merge: true}); } catch (e) {}
+}
+
+/* ---------- Detail sheet ---------- */
+function openDetail(id) {
+  const p = posts.find(x => x.id === id); if (!p) return;
+  curId = id; notifOpen = false; rateVal = 0;
+  const mine = ratings.find(x => x.id === p.owner + "_" + uid);
+  if (mine) rateVal = mine.stars || 0;
+  renderDetail();
+  $("dlg").classList.remove("hide");
+  if (p.owner !== uid && !seen.has(id)) {
+    seen.add(id);
+    try { sessionStorage.setItem("seen", JSON.stringify([...seen])); } catch (e) {}
+    updateDoc(doc(db, "posts", id), {views: increment(1)}).catch(() => {});
+  }
+}
+function closeDlg() { curId = null; notifOpen = false; $("dlg").classList.add("hide"); }
+function updateBell() {
+  const n = incoming.filter(a => !a.read).length + outgoing.filter(a => a.applicantRead === false).length;
+  $("bdg").textContent = n > 9 ? "9+" : n; $("bdg").classList.toggle("hide", !n);
+}
+function openNotifs() {
+  newIds = new Set([
+    ...incoming.filter(a => !a.read).map(a => a.id),
+    ...outgoing.filter(a => a.applicantRead === false).map(a => a.id)
+  ]);
+  curId = null; notifOpen = true; notifTab = "all"; renderNotifs();
+  $("dlg").classList.remove("hide");
+  incoming.filter(a => !a.read).forEach(a => updateDoc(doc(db, "applications", a.id), {read: true}).catch(() => {}));
+  outgoing.filter(a => a.applicantRead === false).forEach(a => updateDoc(doc(db, "applications", a.id), {applicantRead: true}).catch(() => {}));
+}
+function renderNotifs() {
+  const all = [
+    ...incoming.map(a => ({...a, _dir: "rec"})),
+    ...outgoing.map(a => ({...a, _dir: "sent"}))
+  ].sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+  const list = all.filter(a => notifTab === "all" || a._dir === notifTab);
+  const seg = `<div class="seg" style="margin:0 0 10px">${["all","rec","sent"].map(k => `<button data-ntab="${k}" class="${notifTab === k ? "on" : ""}">${t("n_" + k)}</button>`).join("")}</div>`;
+  const body = list.length ? list.map(a => {
+    const isNew = newIds.has(a.id);
+    if (a._dir === "rec") {
+      const tel = String(a.phone || "").replace(/\D/g, "");
+      const details = [
+        a.phone ? `${t("l_phone")}: <b>${esc(a.phone)}</b>` : "",
+        a.otype ? `${t("l_otype")}: <b>${esc(t("ot_" + a.otype))}</b>` : "",
+        a.firm ? `${t("l_firm")}: <b>${esc(a.firm)}</b>` : "",
+        a.gst ? `${t("l_gst")}: <b>${esc(a.gst)}</b>` : "",
+        a.cat ? `${t("l_pcat")}: <b>${esc(catName(a.cat))}</b>` : "",
+        a.qual ? `${t("l_qual")}: <b>${esc(t("q_" + a.qual))}</b>` : "",
+        has(a.exp) ? `${t("l_exp")}: <b>${esc(a.exp)} ${t("yrs")}</b>` : "",
+        a.salary ? `${t("l_psal")}: <b>${esc(a.salary)}</b>` : "",
+        (a.city || a.state) ? `${t("c_addr")}: <b>${esc([cityName(a.city), a.state].filter(Boolean).join(", "))}</b>` : "",
+        a.email ? `${t("l_email")}: <b>${esc(a.email)}</b>` : "",
+        a.about ? `${t("l_about")}: <b>${esc(a.about)}</b>` : ""
+      ].filter(Boolean).join("<br>");
+      return `<div class="rv">
+        <div style="margin-bottom:4px">${isNew ? `<span class="tg ft">${t("new_tag")}</span> ` : ""}<span class="tg rec">${t("n_badge_rec")}</span> <span class="mu">· ${ago(a.createdAt)}</span></div>
+        <b>${esc(a.name || t("anon"))}</b> ${t("ap_on")} <b>${esc(a.postTitle)}</b>
+        ${details ? `<div class="nkv">${details}</div>` : ""}
+        ${tel ? `<div class="acts"><a href="tel:${tel}" class="ab pr">${t("call")}</a><a href="https://wa.me/91${tel.slice(-10)}" target="_blank" rel="noopener" class="ab">WhatsApp</a></div>` : ""}
+      </div>`;
+    } else {
+      const p = posts.find(x => x.id === a.postId);
+      const tel = String(a.ownerPhone || p?.phone || "").replace(/\D/g, "");
+      const oName = a.ownerName || p?.firm || p?.name || t("anon");
+      const oCity = a.ownerCity || p?.city || "", oArea = a.ownerArea || p?.area || "", oState = a.ownerState || p?.state || "";
+      const oPay = a.ownerPay || (p ? payStr(p) : ""), oCat = a.postCat || p?.category || "";
+      const details = [
+        oName ? `${a.ownerType ? esc(t("ot_" + a.ownerType)) : t("c_emp")}: <b>${esc(oName)}</b>` : "",
+        oCat ? `${t("l_cat")}: <b>${esc(catName(oCat))}</b>` : "",
+        oPay ? `${t("sal")}: <b>${esc(oPay)}</b>` : "",
+        (oCity || oState) ? `${t("c_addr")}: <b>${esc([oArea, cityName(oCity), oState].filter(Boolean).join(", "))}</b>` : ""
+      ].filter(Boolean).join("<br>");
+      return `<div class="rv">
+        <div style="margin-bottom:4px">${isNew ? `<span class="tg ft">${t("new_tag")}</span> ` : ""}<span class="tg sent">${t("n_badge_sent")}</span> <span class="mu">· ${ago(a.createdAt)}</span></div>
+        ${t("ap_sent_to")} <b>${esc(a.postTitle)}</b>
+        ${details ? `<div class="nkv">${details}</div>` : ""}
+        <div class="acts">${tel ? `<a href="tel:${tel}" class="ab pr">${t("call")}</a><a href="https://wa.me/91${tel.slice(-10)}" target="_blank" rel="noopener" class="ab">WhatsApp</a>` : ""}${p ? `<button class="ab" data-det="${p.id}">${t("det")}</button>` : ""}</div>
+      </div>`;
+    }
+  }).join("") : `<p class="mu">${t("notif_none")}</p>`;
+  $("dbody").innerHTML = `<div class="shd"><div style="font-size:18px;font-weight:700">🔔 ${t("notif_title")}</div><button class="xbtn" data-close="1" aria-label="Close">✕</button></div>${seg}${body}`;
+}
+function updateStars() { document.querySelectorAll("#stars button").forEach(b => b.classList.toggle("on", +b.dataset.star <= rateVal)); }
+function renderDetail() {
+  const p = posts.find(x => x.id === curId); if (!p) { closeDlg(); return; }
+  const s = sideOf(p), own = p.owner === uid, r = ratingOf(p.owner);
+  const tel = String(p.phone || "").replace(/\D/g, "");
+  const exp = has(p.exp) ? (+p.exp === 0 ? t("fresher") : p.exp + " " + t("yrs")) : "";
+  const d = distOf(p);
+  const addrWithDist = placeOf(p) + (d ? ` (📍 ${fmtDist(d)} ${t("away")})` : "");
+  let rows = kv("l_side", t(s === "offer" ? "tab_offer" : "tab_seek"));
+  if (s === "offer") {
+    rows += kvRaw(otypeLabel(p), p.firm || p.name) + kv("l_gst", p.gst) + kv("l_pay", payStr(p)) + kv("l_cat", catName(p.category)) +
+      kv("l_jtype", p.jtype ? t("jt_" + p.jtype) : "") + kv("l_openings", p.openings) + kv("l_timing", p.timing) +
+      kv("l_qual", p.qual ? t("q_" + p.qual) : "") + kv("l_exp", exp) +
+      kv("l_gender", p.gender && p.gender !== "any" ? t("gd_" + p.gender) : "") +
+      kv("l_perks", [p.food ? t("p_food") : "", p.stay ? t("p_stay") : ""].filter(Boolean).join(", ")) +
+      kv("l_join", p.join ? t("j_" + p.join) : "") + kv("c_addr", addrWithDist) + kv("l_addr", p.addr) + kv("l_phone", p.phone) + kv("l_desc_o", p.desc);
+  } else {
+    rows += kvRaw(workerLabel(p), p.name) + kv("l_psal", payStr(p)) + kv("l_cat", catName(p.category)) +
+      kv("l_qual", p.qual ? t("q_" + p.qual) : "") + kv("l_exp", exp) + kv("l_age", p.age) + kv("l_work", p.work) +
+      kv("l_join", p.join ? t("j_" + p.join) : "") + kv("c_addr", addrWithDist) + kv("l_phone", p.phone) + kv("l_desc_s", p.desc);
+  }
+  const fav = isFav(p.id);
+  const applyBtn = myApps.has(p.id) ? `<button class="ab ok" disabled>✓ ${t("applied")}</button>` : `<button class="ab pr" data-apply="${p.id}">${t("apply")}</button>`;
+  const contactBtns = tel ? `<a href="tel:${tel}" class="ab">${t("call")}</a><a href="https://wa.me/91${tel.slice(-10)}" target="_blank" rel="noopener" class="ab">WhatsApp</a>` : "";
+  const favBtn = `<button class="ab${fav ? " fav" : ""}" data-fav="${p.id}">${fav ? "♥" : "♡"} ${t(fav ? "fav_on" : "fav")}</button>`;
+  const ownerBtns = own ? `<button class="ab" data-edit="${p.id}">${t("edit")}</button>${p.featured ? "" : `<button class="ab" data-ft="${p.id}">${t("feat_test")}</button>`}<button class="ab dl" data-del="${p.id}">${t("delete")}</button>` : `<button class="ab" data-rep="${p.id}">${t("report")}${(p.reports || []).length ? " (" + (p.reports || []).length + ")" : ""}</button>`;
+  const reviews = r ? [...r.list].sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0)).map(x =>
+    `<div class="rv"><b><span class="st">${"★".repeat(x.stars || 0)}</span> ${esc(x.raterName || t("anon"))}</b>${x.text ? `<p>${esc(x.text)}</p>` : ""}<span class="mu">${ago(x.createdAt)}</span></div>`).join("") : "";
+  const form = own ? `<p class="mu">${t("rat_own")}</p>` :
+    `<h4>${t("rat_give")}</h4><div id="stars">${[1,2,3,4,5].map(i => `<button data-star="${i}">★</button>`).join("")}</div>
+     <textarea id="rt" placeholder="${t("rat_ph")}"></textarea><button id="rsend" style="width:100%">${t("rat_btn")}</button>`;
+  $("dbody").innerHTML = `<div class="shd"><div class="ti" style="font-size:18px">${esc(p.title)}</div><button class="xbtn" data-close="1" aria-label="Close">✕</button></div>
+  <div class="r3" style="margin:4px 0 8px"><span>${EYE} ${p.views || 0} ${t("views_l")}</span><span>${ago(p.createdAt)}</span></div>
+  ${rows}
+  <div class="acts" style="margin-top:12px">${applyBtn}${contactBtns}${favBtn}<button class="ab" data-share="${p.id}">${t("share")}</button>${ownerBtns}</div>
+  <h4>${t("rat_title")}</h4>
+  <div class="mu">${r ? `<span class="st">★ ${r.avg.toFixed(1)}</span> · ${t("rat_count").replace("{n}", r.n)}` : t("rat_none")}</div>
+  ${reviews}${form}`;
+  const mine = ratings.find(x => x.id === p.owner + "_" + uid);
+  if (!own && mine && $("rt")) $("rt").value = mine.text || "";
+  updateStars();
+}
+
+/* ---------- Global clicks ---------- */
+document.addEventListener("click", async e => {
+  const nr = e.target.closest("[data-near]");
+  if (nr) { requestUserLocation(); return; }
+  const nb = e.target.closest("[data-ntab]");
+  if (nb) { notifTab = nb.dataset.ntab; renderNotifs(); return; }
+  const st = e.target.closest("[data-star]");
+  if (st) { rateVal = +st.dataset.star; updateStars(); return; }
+  const rl = e.target.closest("[data-role]");
+  if (rl) { await chooseRole(rl.dataset.role); return; }
+  if (e.target.id === "dlg") { closeDlg(); return; }
+  const b = e.target.closest("button");
+  if (b && b.id === "tncAgreeBtn") { $("agreeChk").checked = true; $("go").disabled = false; $("amsg").textContent = ""; closeDlg(); return; }
+  if (b && (b.id === "dclose" || b.dataset.close)) { closeDlg(); return; }
+  if (b && b.id === "rsend") {
+    const p = posts.find(x => x.id === curId); if (!p) return;
+    if (p.owner === uid) return alert(t("rat_own"));
+    if (!rateVal) return alert(t("rat_pick"));
+    try {
+      await setDoc(doc(db, "ratings", p.owner + "_" + uid), {target: p.owner, rater: uid, raterName: prof.name || "", stars: rateVal, text: $("rt").value.trim().slice(0, 300), createdAt: Date.now()});
+      alert(t("rat_done"));
+    } catch { alert(t("e_other")); }
+    return;
+  }
+  const act = b && (b.dataset.del || b.dataset.rep || b.dataset.ft || b.dataset.share || b.dataset.det || b.dataset.apply || b.dataset.edit || b.dataset.fav);
+  if (act) {
+    const id = act, p = posts.find(x => x.id === id); if (!p) return;
+    if (b.dataset.fav) return toggleFav(id);
+    if (b.dataset.det) return openDetail(id);
+    if (b.dataset.edit) { closeDlg(); return startEdit(p); }
+    if (b.dataset.apply) {
+      if (p.owner === uid) return alert(t("ap_own"));
+      if (!prof.phone || !prof.name) { alert(t("ap_need_prof")); closeDlg(); showTab("profile"); return; }
+      if (myApps.has(id)) return;
+      try {
+        await setDoc(doc(db, "applications", id + "_" + uid), {
+          postId: id, postTitle: p.title, postOwner: p.owner,
+          ownerName: p.firm || p.name || "", ownerType: p.otype || "", ownerPhone: p.phone || "",
+          ownerState: p.state || "", ownerCity: p.city || "", ownerArea: p.area || "",
+          ownerPay: payStr(p), postCat: p.category || "",
+          applicant: uid, name: prof.name || "", email: auth.currentUser?.email || "",
+          phone: prof.phone || "", role: prof.role || "", otype: prof.otype || "",
+          cat: prof.cat || "", qual: prof.qual || "", exp: prof.exp || "",
+          salary: prof.salary || "", state: prof.state || "", city: prof.city || "",
+          about: prof.about || "", firm: prof.firm || "", gst: prof.gst || "",
+          read: false, applicantRead: false, createdAt: Date.now()
+        });
+        alert(t("ap_done"));
+      } catch { alert(t("e_other")); }
+      return;
+    }
+    if (b.dataset.share) {
+      return shareIt(p.title + " - " + placeOf(p) + (p.pay ? " | " + p.pay : "") + "\n" + t("sh_see"), location.origin + location.pathname);
+    }
+    try {
+      if (b.dataset.del) { if (confirm(t("cf_del"))) { await deleteDoc(doc(db, "posts", id)); closeDlg(); } }
+      else if (b.dataset.rep) {
+        if ((p.reports || []).includes(uid)) return alert(t("rep_already"));
+        await updateDoc(doc(db, "posts", id), {reports: arrayUnion(uid)});
+        alert(t("rep_done")); renderDetail();
+      }
+      else if (b.dataset.ft) {
+        if (confirm(t("cf_ft"))) { await updateDoc(doc(db, "posts", id), {featured: true}); renderDetail(); }
+      }
+    } catch { alert(t("e_other")); }
+    return;
+  }
+  if (e.target.closest("a") || b) return;
+  const c = e.target.closest("[data-open]");
+  if (c) openDetail(c.dataset.open);
+});
+
+/* ---------- New post ---------- */
+function clearForm() {
+  ["t","pay","ex","area","addr","tm","op","ag","wk","d","gst"].forEach(i => $(i).value = "");
+  $("food").checked = false; $("stay").checked = false; $("urg").checked = false;
+  $("pper").value = "month";
+  $("otype").value = prof.otype || "company";
+  $("state").value = prof.state || ""; $("city").value = prof.city || "";
+  $("firm").value = prof.firm || ""; $("nm").value = prof.name || ""; $("ph").value = prof.phone || "";
+  postLat = null; postLng = null; $("locStat").textContent = "";
+}
+function stopEdit() {
+  if (!editId) return;
+  editId = null; clearForm(); $("save").textContent = t("btn_post"); $("msg").textContent = "";
+}
+function startEdit(p) {
+  editId = p.id; setSide(sideOf(p));
+  $("t").value = p.title || ""; $("otype").value = p.otype || prof.otype || "company";
+  $("firm").value = p.firm || ""; $("nm").value = p.name || "";
+  $("c").value = p.category || ""; $("pay").value = p.pay || ""; $("pper").value = p.payper || "";
+  $("op").value = p.openings || ""; $("ag").value = p.age || "";
+  $("jt").value = p.jtype || "full"; $("tm").value = p.timing || "";
+  $("ql").value = p.qual || ""; $("ex").value = has(p.exp) ? p.exp : "";
+  $("state").value = p.state || ""; $("city").value = p.city || ""; $("area").value = p.area || ""; $("addr").value = p.addr || "";
+  postLat = typeof p.lat === "number" ? p.lat : null;
+  postLng = typeof p.lng === "number" ? p.lng : null;
+  $("locStat").textContent = postLat !== null ? "✓ " + t("loc_saved") : "";
+  $("jn").value = p.join || "now"; $("gd").value = p.gender || "any";
+  $("food").checked = !!p.food; $("stay").checked = !!p.stay; $("urg").checked = !!p.urgent;
+  $("wk").value = p.work || ""; $("ph").value = p.phone || ""; $("d").value = p.desc || ""; $("gst").value = p.gst || "";
+  $("save").textContent = t("btn_update"); $("msg").textContent = "";
+  showTab("new");
+}
+$("save").onclick = async () => {
+  const v = i => $(i).value.trim(), ph = v("ph").replace(/\D/g, ""), s = postSide;
+  if (!v("t") || ph.length < 10) { $("msg").textContent = t("m_need"); return; }
+  const data = {
+    side: s, title: v("t"), category: $("c").value, pay: v("pay"), payper: $("pper").value, qual: $("ql").value, exp: v("ex"),
+    state: $("state").value, city: v("city"), area: v("area"), join: $("jn").value, phone: ph, desc: v("d")
+  };
+  if (postLat !== null && postLng !== null) {
+    data.lat = postLat; data.lng = postLng;
+  } else {
+    const cm = CITY_MAP[v("city").toLowerCase()];
+    if (cm) { data.lat = cm[0]; data.lng = cm[1]; }
+  }
+  if (s === "offer") {
+    Object.assign(data, {otype: $("otype").value, name: v("firm") || prof.name || "", firm: v("firm"), openings: v("op"), jtype: $("jt").value, timing: v("tm"),
+      addr: v("addr"), gender: $("gd").value, food: $("food").checked, stay: $("stay").checked, urgent: $("urg").checked, gst: v("gst")});
+  } else {
+    Object.assign(data, {name: v("nm") || prof.name || "", age: v("ag"), work: v("wk")});
+  }
+  try {
+    if (editId) {
+      await updateDoc(doc(db, "posts", editId), data);
+      editId = null; $("save").textContent = t("btn_post");
+      $("msg").textContent = t("m_updated");
+    } else {
+      Object.assign(data, {owner: uid, featured: false, reports: [], views: 0, createdAt: Date.now()});
+      const id = "p" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+      await setDoc(doc(db, "posts", id), data);
+      $("msg").textContent = t("m_posted");
+    }
+    clearForm();
+    homeTab = s; syncSeg();
+    showTab("feed");
+  } catch { $("msg").textContent = t("m_postfail"); }
+};
+
+/* ---------- Profile ---------- */
+function renderSummary() {
+  const rows = [["l_name", prof.name], ["l_role", prof.role ? t(prof.role === "seeker" ? "role_seeker" : "role_employer") : ""]];
+  if (prof.role === "employer") rows.push(["l_otype", prof.otype ? t("ot_" + prof.otype) : ""], ["l_firm", prof.firm], ["l_ecat", prof.ecat ? catName(prof.ecat) : ""], ["l_esal", prof.esal], ["l_gst", prof.gst]);
+  if (prof.role === "seeker") rows.push(["l_pcat", prof.cat ? catName(prof.cat) : ""], ["l_qual", prof.qual ? t("q_" + prof.qual) : ""],
+    ["l_exp", has(prof.exp) ? prof.exp + " " + t("yrs") : ""], ["l_psal", prof.salary]);
+  rows.push(["l_phone", prof.phone], ["l_state", prof.state], ["l_city", prof.city ? cityName(prof.city) : ""], ["l_about", prof.about]);
+  const h = rows.map(r => kv(r[0], r[1])).join("");
+  $("psum").innerHTML = h || `<p class="mu">${t("nosum")}</p>`;
+}
+function toggleRole() {
+  const r = $("prole").value;
+  $("pemp").classList.toggle("hide", r !== "employer");
+  $("psk").classList.toggle("hide", r !== "seeker");
+}
+function fillProfileForm() {
+  $("pn").value = prof.name || ""; $("prole").value = prof.role || "";
+  $("potype").value = prof.otype || "company"; $("pfirm").value = prof.firm || ""; $("pecat").value = prof.ecat || ""; $("pesal").value = prof.esal || ""; $("pgst").value = prof.gst || "";
+  $("pcat").value = prof.cat || ""; $("pql").value = prof.qual || ""; $("pex").value = prof.exp || ""; $("psal").value = prof.salary || "";
+  $("pp").value = prof.phone || ""; $("pstate").value = prof.state || ""; $("pc").value = prof.city || ""; $("pabout").value = prof.about || "";
+  toggleRole();
+}
+$("prole").onchange = toggleRole;
+function applyRoleDefaults() {
+  if (!prof.role) return;
+  homeTab = prof.role === "employer" ? "seek" : "offer"; syncSeg();
+  setSide(prof.role === "employer" ? "offer" : "seek");
+}
+async function loadProfile(user) {
+  try { const snap = await getDoc(doc(db, "users", user.uid)); prof = snap.exists() ? snap.data() : {}; }
+  catch { prof = {}; }
+  if (!Array.isArray(prof.favs)) {
+    try { prof.favs = JSON.parse(localStorage.getItem("favs_" + user.uid) || "[]"); } catch (e) { prof.favs = []; }
+  }
+  fillProfileForm(); renderSummary(); applyRoleDefaults();
+  if (prof.name && !$("nm").value) $("nm").value = prof.name;
+  if (prof.otype) $("otype").value = prof.otype;
+  if (prof.firm && !$("firm").value) $("firm").value = prof.firm;
+  if (prof.phone && !$("ph").value) $("ph").value = prof.phone;
+  if (prof.state) $("state").value = prof.state;
+  if (prof.city) $("city").value = prof.city;
+  $("ob").classList.toggle("hide", !!prof.role);
+  render();
+}
+async function chooseRole(role) {
+  try { await setDoc(doc(db, "users", uid), {role, updatedAt: Date.now()}, {merge: true}); } catch (e) {}
+  prof.role = role; fillProfileForm(); renderSummary(); applyRoleDefaults();
+  $("ob").classList.add("hide"); render();
+}
+$("psave").onclick = async () => {
+  if (!uid) return;
+  const ph = $("pp").value.replace(/\D/g, "");
+  if ($("pp").value && ph.length < 10) { $("pmsg").textContent = t("m_pbad"); return; }
+  const role = $("prole").value;
+  const data = {
+    name: $("pn").value.trim(), role,
+    otype: role === "employer" ? $("potype").value : "",
+    firm: role === "employer" ? $("pfirm").value.trim() : "",
+    ecat: role === "employer" ? $("pecat").value : "",
+    esal: role === "employer" ? $("pesal").value.trim() : "",
+    gst: role === "employer" ? $("pgst").value.trim() : "",
+    cat: role === "seeker" ? $("pcat").value : "", qual: role === "seeker" ? $("pql").value : "",
+    exp: role === "seeker" ? $("pex").value.trim() : "", salary: role === "seeker" ? $("psal").value.trim() : "",
+    phone: ph, state: $("pstate").value, city: $("pc").value.trim(), about: $("pabout").value.trim(),
+    favs: Array.isArray(prof.favs) ? prof.favs : [],
+    updatedAt: Date.now()
+  };
+  try {
+    await setDoc(doc(db, "users", uid), data, {merge: true});
+    prof = data; renderSummary();
+    $("nm").value = data.name; if (data.otype) $("otype").value = data.otype; $("firm").value = data.firm; $("ph").value = ph;
+    if (data.state) $("state").value = data.state; if (data.city) $("city").value = data.city;
+    $("pmsg").textContent = t("m_psaved");
+    render();
+  } catch { $("pmsg").textContent = t("m_pfail"); }
+};
+
+/* ---------- Help desk ---------- */
+$("hsend").onclick = async () => {
+  const sub = $("hs").value.trim(), msg = $("hm").value.trim();
+  if (!sub || !msg) { $("hmsg").textContent = t("m_hfill"); return; }
+  try {
+    await addDoc(collection(db, "tickets"), {owner: uid, email: auth.currentUser?.email || "", subject: sub, message: msg, createdAt: Date.now()});
+    $("hs").value = ""; $("hm").value = "";
+    $("hmsg").textContent = t("m_hsent");
+  } catch { $("hmsg").textContent = t("m_hfail"); }
+};
+
+applyLang();
+$("pper").value = "month";
+</script>
+</body>
+</html>
